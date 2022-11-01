@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GharibFood</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/GharibFood.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <a href="../paginas/home.html" class="logo"><img src="../imagens/logo-minimizado.png" alt="logotipo do site"></a>
+            <div class="caixa-de-pesquisa">
+                <input type="text" id="textBusca" placeholder="Buscar..."/>
+                <img src="../imagens/pesquisa.png" id="img-buttonBusca" alt="Buscar"/>
+            </div>
+            
+            <ul class="menu">
+                <a href="../paginas/cadastro.html"><li>CADASTRE-SE</li></a>
+                <img src="../imagens/icon-cadastro.png" alt="ícone de cadastro" class="icon-cadastro-login"> 
+                <a href="#"><li>LOGIN</li></a>  
+                <img src="../imagens/icon-login.png" alt="ícone de login" class="icon-cadastro-login">
+            </ul>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - GharibFood - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
