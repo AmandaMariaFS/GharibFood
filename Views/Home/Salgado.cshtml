@@ -1,0 +1,66 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/GharibFood.styles.css" asp-append-version="true" />
+
+<body class="body-home">
+        <div class="categorias">
+            <div class="botao-categoria"> <a href="/Home/Salgado"><button>Salgado</button></a></div>
+            <div class="botao-categoria"> <a href="#"><button>Doce</button></a></div>
+        </div>
+
+        <h1>Salgados</h1>
+
+        <div class="filtro">
+            <h2>FILTRAR POR:</h2>
+            <h3>CONTINENTES</h3>
+
+            <img src="../imagens/img-localizacao.png" alt="imagem de localização" id="img-localizacao">
+
+            <div><button href="#" class="continentes-filtro">ÁFRICA</button></div>
+            <div><button href="#" class="continentes-filtro">AMÉRICA</button></div>
+            <div><button href="#" class="continentes-filtro">ÁSIA</button></div>
+            <div><button href="#" class="continentes-filtro">EUROPA</button></div>
+            <div><button href="#" class="continentes-filtro">OCEANIA</button></div>
+
+        </div>
+
+        <div class="menu-receitas-categoria">
+
+            <a href="#">
+                <div class="bloco-receita-categoria">
+                    <img src="../imagens/arroznegro.jpg" alt="imagem de arroz negro à brasileira" class="img-link-receita">
+                    <div class="info">
+                        <p>Salgado</p>
+                        <h3>Arroz negro à brasileira</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="bloco-receita-categoria">
+                    <img src="../imagens/tartar.jpg" alt="imagem de tartar de slmão, manga e avocado" class="img-link-receita">
+    
+                    <div class="info">
+                        <p>Salgado</p>
+                        <h3>Tartar de salmão, manga e avocado</h3>
+                    </div>
+                </div> 
+            </a>
+
+            <a href="#">
+                <div class="bloco-receita-categoria">
+                    <img src="../imagens/dakos.png" alt="imagem de dakos" class="img-link-receita">
+    
+                    <div class="info">
+                        <p>Salgado</p>
+                        <h3>Dakos</h3>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </body>
