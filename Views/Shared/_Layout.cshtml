@@ -10,19 +10,25 @@
 </head>
 <body>
     <header>
-        <a href="/Home/Index" class="logo"><img src="/Views/Shared/logo-minimizado.png" alt="logotipo do site"></a>
+        <div class="header">
+            <a href="/Home/Index" class="logo"><img src="/imagens/logo-minimizado.png" alt="logotipo do site"></a>
             <div class="caixa-de-pesquisa">
                 <input type="text" id="textBusca" placeholder="Buscar..."/>
                 <img src="../imagens/pesquisa.png" id="img-buttonBusca" alt="Buscar"/>
             </div>
             
             <ul class="menu">
-                <a href="../paginas/cadastro.html"><li>CADASTRE-SE</li></a>
-                <img src="../imagens/icon-cadastro.png" alt="ícone de cadastro" class="icon-cadastro-login"> 
-                <a href="#"><li>LOGIN</li></a>  
-                <img src="../imagens/icon-login.png" alt="ícone de login" class="icon-cadastro-login">
+                <a href="../paginas/cadastro.html"> 
+                    <li>CADASTRE-SE <img src="../imagens/icon-cadastro.png" alt="ícone de cadastro" class="icon-cadastro-login"> </li>
+                </a>
+                
+                <a href="../paginas/login.html">
+                    <li>LOGIN <img src="../imagens/icon-login.png" alt="ícone de login" class="icon-cadastro-login"></li>
+                </a>  
             </ul>
+        </div>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

@@ -100,3 +100,22 @@ button.accept-policy {
 .icon-cadastro-login{
     margin-left: 5px;
 }
+
+.menu{
+  display: flex;
+  margin: 23px;
+}
+
+.menu a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.menu li{
+  list-style-type: none;
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}

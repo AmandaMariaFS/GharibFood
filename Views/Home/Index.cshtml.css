@@ -1,0 +1,121 @@
+.categorias{
+    text-align: center;
+    display: flex;
+    height: 70px;
+    background-color: #616161;
+}
+
+.botao-categoria{
+    width: 50%;
+    position: relative;
+}
+
+.botao-categoria button{
+    font-size: 20px;
+    width: 100%;
+    border: 2px solid;
+    color: black;
+    text-decoration: none;      
+    background-color: white;
+    padding: 18px;
+    width: 100%;
+    cursor: pointer; 
+    transition-duration: 0.4s;
+}
+
+.botao-categoria button:hover{   
+    background-color: rgb(179, 179, 179);
+}
+
+.body-home h1{
+    text-align: center;
+    margin-top: 8vh;
+}
+
+.filtro{
+    display: inline-block;
+    background-color:#E9B85B;
+    width: 380px;
+    height: 800px;
+    margin-left: 25vh;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 5vh;
+}
+
+.filtro h2{
+    margin-top: 12vh;
+}
+
+#img-localizacao{
+    margin-bottom: 5vh;
+
+}
+
+.continentes-filtro{
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: transparent;
+    border: 3px solid black;
+    margin-bottom: 2vh;
+    border-radius: 14px;
+    padding: 2px;
+    width: 50%;
+    margin: 2vh;
+    cursor: pointer;
+}
+
+.menu-receitas{
+    width: 965px;
+    margin: 0 auto;
+    margin-top: 2vh;
+}
+
+.menu-receitas-categoria{
+    width: 380px;
+    float: right;
+    margin-right: 20vh;
+}
+
+.bloco-receita-categoria{
+    margin-top: 6vh;
+    text-align: center;
+    width: 380px;
+    height: 350px;
+    background-color: #E9B85B;
+    position: relative;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.bloco-receita{
+    margin-top: 6vh;
+    text-align: center;
+    width: 400px;
+    height: 350px;
+    background-color: #E9B85B;
+    position: relative;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+#bloco-receita-direita{
+   margin-left: 10rem;
+}
+
+.info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.img-link-receita{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+}
