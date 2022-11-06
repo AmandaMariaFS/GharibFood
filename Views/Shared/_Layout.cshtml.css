@@ -47,53 +47,56 @@ button.accept-policy {
   line-height: 60px;
 }
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 .header{
-  height: 120px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #E9B85B;
-  padding: 20px;
-  position: relative;
-  width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #E9B85B;
+    padding: 20px;
+    position: relative;
+    width: 100%;
 }
 
 .caixa-de-pesquisa{
-  background-color:#C4C4C4;
-  border:solid 1px;
-  border-radius:15px;
-  width:300px;
-  height: 36px;
-  margin-top: 5vh;
-  left: 50%;
-  margin-left: -150px; /* A metade de sua largura. */
-  position: absolute;
+    background-color:#C4C4C4;
+    border:solid 1px;
+    border-radius:15px;
+    width:300px;
+    height: 36px;
+    margin-top: 5vh;
+    left: 50%;
+    margin-left: -150px; /* A metade de sua largura. */
+    position: absolute;
+  }
+
+#textBusca{
+    float:middle;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:25px;
+    width:260px;
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 10px;
+    outline: none;
+  }
+
+#img-buttonBusca{
+    float: right;
+    margin-top: 4px;
+    margin-right: 4px;
+    height: 25px;
 }
 
-.menu{
-  display: flex;
-  margin: 23px;
-}
-
-.menu a{
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-.menu li{
-  list-style-type: none;
-  padding-left: 2rem;
-  text-align: center;
-}
-
-.menu-receitas{
-  width: 965px;
-  margin: 0 auto;
-  margin-top: 2vh;
-}
-
-.menu-receitas-categoria{
-  width: 380px;
-  float: right;
-  margin-right: 20vh;
+.icon-cadastro-login{
+    margin-left: 5px;
 }
