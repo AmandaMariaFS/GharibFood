@@ -1,0 +1,35 @@
+.body-receita{
+    background-color: #E5E5E5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.box-ini{
+    width: 80%;
+    background-color: #FFFFFF;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px 2px grey;
+}
+
+.video iframe{
+    display: flex;
+    margin: 0 auto;
+}
+
+.box-etc{
+    display: flex;
+    background-color: #E5E5E5;
+    padding: 80px;
+    border-radius: 10px;
+    min-width: 100px;
+    max-width: 80px;
+    margin: auto;
+    box-shadow: 2px 4px 8px 2px grey;
+}
