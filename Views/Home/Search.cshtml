@@ -5,7 +5,6 @@
     Layout = "_Layout";
 }
 
-
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 <link rel="stylesheet" href="~/GharibFood.styles.css" asp-append-version="true" />
@@ -16,30 +15,16 @@
             <div class="botao-categoria"> <a href="/Home/Doce"><button>Doce</button></a></div>
         </div>
 
-        <h1>Salgados</h1>
+        <h1>Exibindo resultados para "@ViewBag.textBusca"</h1>
 
-        <div class="filtro">
-            <h2>FILTRAR POR:</h2>
-            <h3>CONTINENTES</h3>
-
-            <img src="../imagens/img-localizacao.png" alt="imagem de localização" id="img-localizacao">
-
-            <div><a href="#"><button class="continentes-filtro">ÁFRICA</button></a></div>
-            <div><a href="#"><button class="continentes-filtro">AMÉRICA</button></a></div>
-            <div><a href="#"><button class="continentes-filtro">ÁSIA</button></a></div>
-            <div><a href="#"><button  class="continentes-filtro">EUROPA</button></a></div>
-            <div><a href="#"><button class="continentes-filtro">OCEANIA</button></a></div>
-
-        </div>
-
-        <div class="menu-receitas-categoria">
+        <div class="menu-receitas">
 
             @foreach (var receita in Model)
             {
-                if(@receita.Categoria == "Salgado")
+                if(receita.Nome == @ViewBag.textBusca)
                 {
                     <a href="#">
-                    <div class="bloco-receita-categoria">
+                    <div class="bloco-receita">
                         <img src=@receita.CaminhoFoto alt=@receita.DescAlt class="img-link-receita">
                         <div class="info">
                             <p>@receita.Categoria</p>
@@ -49,6 +34,6 @@
                     </a>
                 }
             }
-
+            
         </div>
     </body>

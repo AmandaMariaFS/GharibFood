@@ -12,7 +12,7 @@ public class HomeController : Controller
     private static List<ReceitaViewModel> receitas = 
         new List<ReceitaViewModel>{
         new ReceitaViewModel(1, "Arroz negro à brasileira", "../imagens/arroznegro.jpg", "imagem de arroz negro à brasileira", "Salgado", "America"),
-            new ReceitaViewModel(2, "Tartar de salmão, manga e avocado", "../imagens/tartar.jpg", "imagem de tartar de salmão, manga e avocado", "Salgado", "Africano"),
+            new ReceitaViewModel(2, "Tartar de salmão, manga e avocado", "../imagens/tartar.jpg", "imagem de tartar de salmão, manga e avocado", "Salgado", "Africa"),
             new ReceitaViewModel(3, "Torta de abóbora de noz e pecã", "../imagens/torta-abobora-nozes.png", "imagem de torta de abóbora de noz e pecã", "Doce", "Asia"),
             new ReceitaViewModel(4, "Dakos", "../imagens/dakos.png", "imagem de dakos", "Salgado", "Europa")
         };
@@ -49,6 +49,12 @@ public class HomeController : Controller
 
     public IActionResult Doce()
     {
+        return View(receitas);
+    }
+
+    public IActionResult Search(string textBusca)
+    {
+        ViewBag.textBusca = textBusca;
         return View(receitas);
     }
 
