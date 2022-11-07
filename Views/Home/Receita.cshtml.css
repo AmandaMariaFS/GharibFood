@@ -3,11 +3,16 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 5vh;
+    display: flexbox;
+    place-items: center;
+}
+
+h1{
+    text-align: center;
+    margin: 35px;
 }
 
 .box-ini{
@@ -16,6 +21,15 @@
     padding: 60px;
     border-radius: 10px;
     box-shadow: 2px 4px 8px 2px grey;
+}
+
+#primeira-box-ini{
+    margin-top: 7vh;
+}
+
+h3{
+    color: rgb(208, 132, 102);
+    margin: 2vh;
 }
 
 .video iframe{
@@ -32,4 +46,27 @@
     max-width: 80px;
     margin: auto;
     box-shadow: 2px 4px 8px 2px grey;
+}
+
+table{
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 26px;
+    overflow:hidden;
+    border-collapse:separate;
+    background-color: #E5E5E5;
+    margin: 10vh;
+    border: solid 2px #afaeae;
+}
+
+td{
+    width: 170px;
+}
+
+#info-receita{
+    color: rgb(209, 133, 103);
+}
+
+.box-ini{
+    text-align: justify;
 }
