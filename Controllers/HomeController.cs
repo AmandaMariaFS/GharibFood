@@ -28,8 +28,12 @@ public class HomeController : Controller
         return View();
     }
 
-
     public IActionResult Cadastro()
+    {
+        return View();
+    }
+
+    public IActionResult Login()
     {
         return View();
     }

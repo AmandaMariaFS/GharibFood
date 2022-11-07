@@ -1,10 +1,18 @@
-<body class="body-cadastro">
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/GharibFood.styles.css" asp-append-version="true" />
+
+<body>
     <div class="box">
         
         <div class="lateral-box-cad">
             
             <div class="img-box">
-                <a href="../paginas/home.html" class="logo"><img src="../imagens/logo.png" alt="logotipo do site"></a>
+                <a href="/Home/Index" class="logo"><img src="../imagens/logo.png" alt="logotipo do site"></a>
             </div>
             
             <div class="acesso-login-box">
@@ -12,7 +20,7 @@
                 <p>Faça seu login agora</p>
             </div> 
 
-            <form action="login.html">
+            <form action="/Home/Login">
                 <div class="input-group">
 
                     <div class="botao">

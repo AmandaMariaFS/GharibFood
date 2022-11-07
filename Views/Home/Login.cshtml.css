@@ -1,5 +1,4 @@
-
-body-login{
+.body-login{
     background-image: url(../imagens/background-cadastro.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -132,7 +131,6 @@ form .input-group button{
 .botao{
     margin: 0 auto;
     width: 50%;
-    margin-top: 55%;
 }
 
 .acesso-login-box{

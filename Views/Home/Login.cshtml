@@ -1,0 +1,52 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/GharibFood.styles.css" asp-append-version="true" />
+
+<body class="body-login">
+    <div class="box-log">
+        <div class="lateral-box-log">
+            <div class="img-box-log">
+                <a href="/Home/Index" class="logo"><img src="../imagens/logo.png" alt="logotipo do site"></a>
+            </div>
+            <div class="acesso-login-box">
+                <h2>Não tem uma conta?</h2>
+                <p>Crie uma agora, é rápido!</p>
+            </div>
+            <form action="cadastro.html">
+                <div class="input-group">
+
+                    <div class="botao-cadastro-log">
+                        <button>Cadastrar</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="form-box">
+            <h2>Login</h2>
+            <form action="#">
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite o seu email" required>
+                </div>
+
+                <div class="input-group w50">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    <a href="url">Esqueci minha senha</a>
+                </div>
+
+                <div class="input-group">
+                    <div class="botao">
+                        <button>Entrar</button>
+                    </div>
+    </div>
+
+            </form>
+        </div>
+    </div>
+</body>
