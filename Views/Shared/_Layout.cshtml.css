@@ -1,6 +1,13 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+
+@font-face
+ {
+    font-family: 'Poppins'; 
+    src: url("fonts/Poppins-Medium.ttf"); 
+ }
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
