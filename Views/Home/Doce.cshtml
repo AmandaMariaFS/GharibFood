@@ -1,7 +1,7 @@
 @model List<GharibFood.ViewModels.ReceitaViewModel>
 
 @{
-    ViewData["Title"] = "Salgado";
+    ViewData["Title"] = "Doce";
     Layout = "_Layout";
 }
 
@@ -15,7 +15,14 @@
             <div class="botao-categoria"> <a href="/Home/Doce"><button>Doce</button></a></div>
         </div>
 
-        <h1>Doces</h1>
+        @if(ViewBag.continente != null)
+        {
+            <h1>Doces - @ViewBag.continente</h1>
+        }
+        else
+        {
+            <h1>Doces</h1>
+        }
 
         <div class="filtro">
             <h2>FILTRAR POR:</h2>
@@ -23,11 +30,11 @@
 
             <img src="../imagens/img-localizacao.png" alt="imagem de localização" id="img-localizacao">
 
-            <div><button href="#" class="continentes-filtro">ÁFRICA</button></div>
-            <div><button href="#" class="continentes-filtro">AMÉRICA</button></div>
-            <div><button href="#" class="continentes-filtro">ÁSIA</button></div>
-            <div><button href="#" class="continentes-filtro">EUROPA</button></div>
-            <div><button href="#" class="continentes-filtro">OCEANIA</button></div>
+            <div><a href="/Home/Doce?continente=Africa"><button class="continentes-filtro">ÁFRICA</button></a></div>
+            <div><a href="/Home/Doce?continente=America"><button class="continentes-filtro">AMÉRICA</button></a></div>
+            <div><a href="/Home/Doce?continente=Asia"><button class="continentes-filtro">ÁSIA</button></a></div>
+            <div><a hhref="/Home/Doce?continente=Europa"><button class="continentes-filtro">EUROPA</button></a></div>
+            <div><a href="/Home/Doce?continente=Oceania"><button class="continentes-filtro">OCEANIA</button></a></div>
 
         </div>
 
@@ -37,15 +44,35 @@
             {
                 if(@receita.Categoria == "Doce")
                 {
-                    <a href="#">
-                    <div class="bloco-receita-categoria">
-                        <img src=@receita.CaminhoFoto alt=@receita.DescAlt class="img-link-receita">
-                        <div class="info">
-                            <p>@receita.Categoria</p>
-                            <h3>@receita.Nome</h3>
-                        </div>
-                    </div>
-                    </a>
+                    if(@ViewBag.continente != null)
+                    {
+                        if(@receita.Continente == @ViewBag.continente)
+                        {
+                            <a href="#">
+                            <div class="bloco-receita-categoria">
+                                <img src=@receita.CaminhoFoto alt=@receita.DescAlt class="img-link-receita">
+                                <div class="info">
+                                    <p>@receita.Categoria</p>
+                                    <h3>@receita.Nome</h3>
+                                </div>
+                            </div>
+                            </a>
+                        }
+                    }
+                    else
+                    {
+                        <a href="#">
+                            <div class="bloco-receita-categoria">
+                                <img src=@receita.CaminhoFoto alt=@receita.DescAlt class="img-link-receita">
+                                <div class="info">
+                                    <p>@receita.Categoria</p>
+                                    <h3>@receita.Nome</h3>
+                                </div>
+                            </div>
+                            </a>
+                    }
+                    
+                    
                 }
             }
 

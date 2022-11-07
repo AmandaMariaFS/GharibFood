@@ -48,8 +48,9 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Doce()
+    public IActionResult Doce(string continente)
     {
+        ViewBag.continente = continente;
         return View(receitas);
     }
 
