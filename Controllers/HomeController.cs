@@ -1,12 +1,21 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using GharibFood.Models;
+using GharibFood.ViewModels;
 
 namespace GharibFood.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+
+    private static List<ReceitaViewModel> receitas = 
+        new List<ReceitaViewModel>{
+        new ReceitaViewModel(1, "Arroz negro à brasileira", "../imagens/arroznegro.jpg", "imagem de arroz negro à brasileira", "Salgado"),
+            new ReceitaViewModel(2, "Tartar de salmão, manga e avocado", "../imagens/tartar.jpg", "imagem de tartar de salmão, manga e avocado", "Salgado"),
+            new ReceitaViewModel(3, "Torta de abóbora de noz e pecã", "../imagens/torta-abobora-nozes.png", "imagem de torta de abóbora de noz e pecã", "Doce"),
+            new ReceitaViewModel(4, "Dakos", "../imagens/dakos.png", "imagem de dakos", "Salgado")
+        };
 
     public HomeController(ILogger<HomeController> logger)
     {
@@ -15,7 +24,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        return View(receitas);
     }
 
     public IActionResult Privacy()

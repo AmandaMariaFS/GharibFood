@@ -1,10 +1,13 @@
-﻿@{
+﻿@model List<GharibFood.ViewModels.ReceitaViewModel>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 @{
     Layout = "_Layout";
 }
+
 
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -20,47 +23,18 @@
 
         <div class="menu-receitas">
 
-            <a href="#">
+            @foreach (var receita in Model)
+            {
+                <a href="#">
                 <div class="bloco-receita">
-                    <img src="../imagens/arroznegro.jpg" alt="imagem de arroz negro à brasileira" class="img-link-receita">
+                    <img src=@receita.CaminhoFoto alt=@receita.DescAlt class="img-link-receita">
                     <div class="info">
-                        <p>Salgado</p>
-                        <h3>Arroz negro à brasileira</h3>
+                        <p>@receita.Categoria</p>
+                        <h3>@receita.Nome</h3>
                     </div>
                 </div>
-            </a>
-
-            <a href="#">
-                <div class="bloco-receita" id="bloco-receita-direita">
-                    <img src="../imagens/tartar.jpg" alt="imagem de tartar de salmão, manga e avocado" class="img-link-receita" >
-    
-                    <div class="info">
-                        <p>Salgado</p>
-                        <h3>Tartar de salmão, manga e avocado</h3>
-                    </div>
-                </div>
-            </a> 
-            
-            <a href="#">
-                <div class="bloco-receita">
-                    <img src="../imagens/torta-abobora-nozes.png" alt="imagem de torta de abóbora de noz e pecã" class="img-link-receita">
-                    <div class="info">
-                        <p>Doce</p>
-                        <h3>Torta de abóbora de noz e pecã</h3>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="bloco-receita" id="bloco-receita-direita">
-                    <img src="../imagens/dakos.png" alt="imagem de dakos" class="img-link-receita">
-    
-                    <div class="info">
-                        <p>Salgado</p>
-                        <h3>Dakos</h3>
-                    </div>
-                </div>
-            </a>
+                </a>
+            }
             
         </div>
     </body>
