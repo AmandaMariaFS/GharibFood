@@ -34,7 +34,7 @@ public class HomeController : Controller
 
     public IActionResult Salgado()
     {
-        return View();
+        return View(receitas);
     }
 
     public IActionResult Cadastro()
