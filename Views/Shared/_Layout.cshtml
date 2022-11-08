@@ -21,7 +21,13 @@
                 <img src="../imagens/pesquisa.png" id="img-buttonBusca" alt="Buscar"/>
             </div>
             
-            <ul class="menu">
+            @if (ViewBag.user != null)
+            {
+                <h1>@ViewBag.user</h1>
+            }
+            else
+            {
+                <ul class="menu">
                 <a href="/Home/Cadastro"> 
                     <li>CADASTRE-SE <img src="../imagens/icon-cadastro.png" alt="ícone de cadastro" class="icon-cadastro-login"> </li>
                 </a>
@@ -30,6 +36,8 @@
                     <li>LOGIN <img src="../imagens/icon-login.png" alt="ícone de login" class="icon-cadastro-login"></li>
                 </a>  
             </ul>
+            }
+            
         </div>
     </header>
 

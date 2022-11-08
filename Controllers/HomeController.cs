@@ -17,13 +17,19 @@ public class HomeController : Controller
             new ReceitaViewModel(4, "Dakos", "../imagens/dakos.png", "imagem de dakos", "Salgado", "Europa", "https://youtu.be/fzBkeChLJL8", "10 min", "2 porções", 0, 0)
         };
 
+    private static List<UsuarioViewModel> usuarios = new List<UsuarioViewModel>{
+        new UsuarioViewModel(1, "Amanda", "amandinhaferre@hotmail.com", "AmandaMariaFS", "EnolaHolmes")
+    };
+
+    bool cadastrado = false;
+
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
     }
 
     public IActionResult Index()
-    {
+    {   
         return View(receitas);
     }
 
