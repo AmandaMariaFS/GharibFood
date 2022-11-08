@@ -21,7 +21,7 @@
 
             @foreach (var receita in Model)
             {
-                if(receita.Nome == @ViewBag.textBusca)
+                if(receita.Nome.ToUpper().Contains(@ViewBag.textBusca.ToUpper()))
                 {
                     <a href="#">
                     <div class="bloco-receita">
