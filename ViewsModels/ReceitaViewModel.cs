@@ -29,4 +29,9 @@ public class ReceitaViewModel
         Favoritos = favoritos;
         Comentarios = comentarios;
     }
+
+    public ReceitaViewModel()
+    {
+        
+    }
 }

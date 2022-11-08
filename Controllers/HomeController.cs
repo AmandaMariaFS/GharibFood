@@ -62,7 +62,8 @@ public class HomeController : Controller
 
     public IActionResult Receita(int id)
     {
-        return View(receitas[id-1]);
+        ViewBag.id = id;
+        return View(receitas);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

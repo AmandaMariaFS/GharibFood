@@ -48,7 +48,7 @@
                     {
                         if(@receita.Continente == @ViewBag.continente)
                         {
-                            <a href="/Home/Receita/@receita.Id">
+                            <a href="/Home/Receita?id=@receita.Id">
                             <div class="bloco-receita-categoria">
                                 <img src=@receita.CaminhoFoto alt=@receita.DescAlt class="img-link-receita">
                                 <div class="info">
@@ -61,7 +61,7 @@
                     }
                     else
                     {
-                        <a href="#">
+                        <a href="/Home/Receita?id=@receita.Id">
                             <div class="bloco-receita-categoria">
                                 <img src=@receita.CaminhoFoto alt=@receita.DescAlt class="img-link-receita">
                                 <div class="info">
