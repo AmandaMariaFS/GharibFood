@@ -1,0 +1,59 @@
+@model List<GharibFood.ViewModels.ReceitaViewModel>
+
+@{
+    ViewData["Title"] = "Home";
+    Layout = "_Layout";
+}
+
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/GharibFood.styles.css" asp-append-version="true" />
+
+<body>
+    <div class="body-perfil">
+        <div class="wrapper">
+            <div class="left">
+                <img src="../imagens/perfil.png" alt="user" width="100">
+                <h3>Perfil Teste</h3>
+                <div class="info">
+                    <br>
+                    <br>
+                    <h3></h3>
+                    <h3>Informações</h3>
+                    <div class="info_data">
+                        <div class="data">
+                            <h4>Email</h4>
+                            <p>perfilTeste@gmail.com</p>
+                        </div>
+
+                        <div class="data">
+                        <h4>Nome</h4>
+                            <p>Fulano de tal</p>
+                        </div>
+
+                        <div class="data">
+                            <h4>Nome de usuário</h4>
+                            <p>fulaninho123</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+            
+                <div class="projects">
+                    <h3>Receitas salvas</h3>
+                </div>
+                
+                <div class="social_media">
+                    <ul>
+                        <a href="#"><li><h1> TESTE </h1><i class=""></i></li></a>
+                        <a href="#"><li><h1> TESTE </h1><i class=""></i></li></a>
+                        <a href="#"><li><h1> TESTE </h1><i class=""></i></li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
