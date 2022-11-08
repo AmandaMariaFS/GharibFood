@@ -23,7 +23,7 @@
             {
                 if(receita.Nome.ToUpper().Contains(@ViewBag.textBusca.ToUpper()))
                 {
-                    <a href="#">
+                    <a href="/Home/Receita/@receita.Id">
                     <div class="bloco-receita">
                         <img src=@receita.CaminhoFoto alt=@receita.DescAlt class="img-link-receita">
                         <div class="info">

@@ -11,10 +11,10 @@ public class HomeController : Controller
 
     private static List<ReceitaViewModel> receitas = 
         new List<ReceitaViewModel>{
-        new ReceitaViewModel(1, "Arroz negro à brasileira", "../imagens/arroznegro.jpg", "imagem de arroz negro à brasileira", "Salgado", "America"),
-            new ReceitaViewModel(2, "Tartar de salmão, manga e avocado", "../imagens/tartar.jpg", "imagem de tartar de salmão, manga e avocado", "Salgado", "Africa"),
-            new ReceitaViewModel(3, "Torta de abóbora de noz e pecã", "../imagens/torta-abobora-nozes.png", "imagem de torta de abóbora de noz e pecã", "Doce", "Asia"),
-            new ReceitaViewModel(4, "Dakos", "../imagens/dakos.png", "imagem de dakos", "Salgado", "Europa")
+        new ReceitaViewModel(1, "Arroz negro à brasileira", "../imagens/arroznegro.jpg", "imagem de arroz negro à brasileira", "Salgado", "America", "https://www.youtube.com/embed/diKgUdmj0m8", "10 min", "2 porções", 0, 0),
+            new ReceitaViewModel(2, "Tartar de salmão, manga e avocado", "../imagens/tartar.jpg", "imagem de tartar de salmão, manga e avocado", "Salgado", "Africa", "https://youtu.be/OhiMLGrulKk", "10 min", "2 porções", 0, 0),
+            new ReceitaViewModel(3, "Torta de abóbora de noz e pecã", "../imagens/torta-abobora-nozes.png", "imagem de torta de abóbora de noz e pecã", "Doce", "Asia", "https://youtu.be/Pv6qx9nnBHg", "10 min", "2 porções", 0, 0),
+            new ReceitaViewModel(4, "Dakos", "../imagens/dakos.png", "imagem de dakos", "Salgado", "Europa", "https://youtu.be/fzBkeChLJL8", "10 min", "2 porções", 0, 0)
         };
 
     public HomeController(ILogger<HomeController> logger)
@@ -28,11 +28,6 @@ public class HomeController : Controller
     }
 
     public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    public IActionResult Receita()
     {
         return View();
     }
@@ -63,6 +58,11 @@ public class HomeController : Controller
     {
         ViewBag.textBusca = textBusca;
         return View(receitas);
+    }
+
+    public IActionResult Receita(int id)
+    {
+        return View(receitas[id-1]);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

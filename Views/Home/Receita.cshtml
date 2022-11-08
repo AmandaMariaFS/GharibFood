@@ -1,3 +1,5 @@
+@model GharibFood.ViewModels.ReceitaViewModel
+
 @{
     ViewData["Title"] = "Receita";
     Layout = "_Layout";
@@ -9,9 +11,9 @@
 <body>
     <div class="body-receita">
         <div class="box-ini" id="primeira-box-ini">
-            <h1>Arroz negro à brasileira</h1>
+            <h1>@Model.Nome</h1>
             <div class="video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/diKgUdmj0m8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src=@Model.Video title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <table>
@@ -32,10 +34,10 @@
                 </tr>
 
                 <tr id="info-receita">
-                    <td>10 min</td>
-                    <td>2 porções</td>
-                    <td>0</td>
-                    <td>0</td>                  
+                    <td>@Model.Preparo</td>
+                    <td>@Model.Rendimento</td>
+                    <td>@Model.Favoritos</td>
+                    <td>@Model.Comentarios</td>                  
                 </tr>
 
             </table>
