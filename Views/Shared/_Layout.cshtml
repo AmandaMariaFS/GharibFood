@@ -11,9 +11,9 @@
 <body>
     <header>
         <div class="header">
-            <a href="/Home/Index" class="logo"><img src="/imagens/logo-minimizado.png" alt="logotipo do site"></a>
+            <a href="/Home/Index?user=@ViewBag.user" class="logo"><img src="/imagens/logo-minimizado.png" alt="logotipo do site"></a>
             <div class="caixa-de-pesquisa">
-                <form action="/Home/Search" method="get">
+                <form action="/Home/Search?user=@ViewBag.user" method="get">
                 <input type="text" id="textBusca" name="textBusca" placeholder="Buscar..."/>
                 <input type="submit" id="submitHeader">
                 </form>
@@ -23,7 +23,7 @@
             
             @if (ViewBag.user != null)
             {
-                <h1>@ViewBag.user</h1>
+                <a href="/Home/Perfil?user=@ViewBag.User"> <h1 id="ficaBonito">@ViewBag.user</h1> </a>
             }
             else
             {

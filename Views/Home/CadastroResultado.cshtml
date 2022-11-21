@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/GharibFood.styles.css" asp-append-version="true" />
+
+<body>
+   <div class="body-cadastro">
+        <div class="box">
+            
+            <div class="lateral-box-cad">
+                
+                <div class="img-box">
+                    <a href="/Home/Index" class="logo"><img src="../imagens/logo.png" alt="logotipo do site"></a>
+                </div>
+                
+                <div class="acesso-login-box">
+                    <h2>Faça seu login agora</h2>
+                </div> 
+
+                <form action="/Home/Login">
+                    <div class="input-group">
+
+                        <div class="botao">
+                            <button>Login</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        
+            <div class="form-box">
+                <h2>Cadastro realizado com sucesso</h2>
+                <!-- <p> Já é um membro? <a href="#"> Login </a> </p> -->
+                <a href="/Home/Index?user=@ViewBag.user"></a>
+            </div>
+        </div>
+   </div>
+</body>

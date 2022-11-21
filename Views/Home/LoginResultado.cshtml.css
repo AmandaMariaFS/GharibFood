@@ -43,12 +43,8 @@
     margin: 0 auto;
 }
 .form-box h2{
-    font-size: 45px;
+    font-size: 30px;
     color: #f89804;
-    width: 20%;
-    margin:  0 auto;
-    margin-bottom: 15px;
-    margin-top: 11%;
     text-align: center;
 }
 .form-box p{
@@ -131,6 +127,25 @@ form .input-group button{
 .botao{
     margin: 0 auto;
     width: 50%;
+}
+
+.div-botao-resultado{
+    display: flexbox;
+    margin-top: 30vh;
+}
+
+.botao-resultado{
+    margin: 0 auto;
+    width: 100%;
+    height: 47px;
+    background-color: #ffccb4;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 15px;
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
+
 }
 
 .acesso-login-box{

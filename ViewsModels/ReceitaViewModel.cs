@@ -33,5 +33,5 @@ public class ReceitaViewModel
     public ReceitaViewModel()
     {
         
-    }
+    } 
 }

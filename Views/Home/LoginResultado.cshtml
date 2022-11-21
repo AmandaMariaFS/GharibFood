@@ -1,0 +1,42 @@
+@model GharibFood.ViewModels.UsuarioViewModel
+
+@{
+    ViewData["Title"] = "Logado";
+}
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/GharibFood.styles.css" asp-append-version="true" />
+
+<body>
+    <div class="body-login">
+        <div class="box-log">
+        <div class="lateral-box-log">
+            <div class="img-box-log">
+                <a href="/Home/Index" class="logo"><img src="../imagens/logo.png" alt="logotipo do site"></a>
+            </div>
+            
+        </div>
+        <div class="form-box">
+            @if(Model.User == null)
+            {
+                <h2>Não foi possível realizar o Login</h2>
+                <div class="input-group">
+                    <div class="botao">
+                        <a href="/Home/Index"><button>Ir para home</button></a>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <h2>Login realizado com sucesso</h2>
+                <div class="input-group">
+                    <div class="div-botao-resultado">
+                        <a href="/Home/Index?user=@Model.User"><button class="botao-resultado">Ir para home</button></a>
+                    </div>
+                </div>
+            }
+            
+        </div>
+    </div>
+    </div>
+</body>

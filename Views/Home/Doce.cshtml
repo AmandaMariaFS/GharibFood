@@ -11,8 +11,8 @@
 
 <body class="body-home">
         <div class="categorias">
-            <div class="botao-categoria"> <a href="/Home/Salgado"><button>Salgado</button></a></div>
-            <div class="botao-categoria"> <a href="/Home/Doce"><button>Doce</button></a></div>
+            <div class="botao-categoria"> <a href="/Home/Salgado?user=@ViewBag.user"><button>Salgado</button></a></div>
+            <div class="botao-categoria"> <a href="/Home/Doce?user=@ViewBag.user"><button>Doce</button></a></div>
         </div>
 
         @if(ViewBag.continente != null)
@@ -30,11 +30,11 @@
 
             <img src="../imagens/img-localizacao.png" alt="imagem de localização" id="img-localizacao">
 
-            <div><a href="/Home/Doce?continente=Africa"><button class="continentes-filtro">ÁFRICA</button></a></div>
-            <div><a href="/Home/Doce?continente=America"><button class="continentes-filtro">AMÉRICA</button></a></div>
-            <div><a href="/Home/Doce?continente=Asia"><button class="continentes-filtro">ÁSIA</button></a></div>
-            <div><a hhref="/Home/Doce?continente=Europa"><button class="continentes-filtro">EUROPA</button></a></div>
-            <div><a href="/Home/Doce?continente=Oceania"><button class="continentes-filtro">OCEANIA</button></a></div>
+            <div><a href="/Home/Doce?continente=Africa&user=@ViewBag.user"><button class="continentes-filtro">ÁFRICA</button></a></div>
+            <div><a href="/Home/Doce?continente=America&user=@ViewBag.user"><button class="continentes-filtro">AMÉRICA</button></a></div>
+            <div><a href="/Home/Doce?continente=Asia&user=@ViewBag.user"><button class="continentes-filtro">ÁSIA</button></a></div>
+            <div><a href="/Home/Doce?continente=Europa&user=@ViewBag.user"><button class="continentes-filtro">EUROPA</button></a></div>
+            <div><a href="/Home/Doce?continente=Oceania&user=@ViewBag.user"><button class="continentes-filtro">OCEANIA</button></a></div>
 
         </div>
 
@@ -48,7 +48,7 @@
                     {
                         if(@receita.Continente == @ViewBag.continente)
                         {
-                            <a href="/Home/Receita?id=@receita.Id">
+                            <a href="/Home/Receita?id=@receita.Id&user=@ViewBag.user">
                             <div class="bloco-receita-categoria">
                                 <img src=@receita.CaminhoFoto alt=@receita.DescAlt class="img-link-receita">
                                 <div class="info">
@@ -61,7 +61,7 @@
                     }
                     else
                     {
-                        <a href="/Home/Receita?id=@receita.Id">
+                        <a href="/Home/Receita?id=@receita.Id&user=@ViewBag.user">
                             <div class="bloco-receita-categoria">
                                 <img src=@receita.CaminhoFoto alt=@receita.DescAlt class="img-link-receita">
                                 <div class="info">
