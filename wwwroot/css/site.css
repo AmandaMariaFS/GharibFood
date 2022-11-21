@@ -95,9 +95,13 @@ body {
 }
 
 .menu-receitas{
-  width: 965px;
-  margin: 0 auto;
   margin-top: 2vh;
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-gap: 5vh;
+  place-items: center;
+  display: flexbox;
+  justify-content: center;
 }
 
 .menu-receitas-categoria{
