@@ -12,9 +12,9 @@ public class HomeController : Controller
     private static List<ReceitaViewModel> receitas = 
         new List<ReceitaViewModel>{
         new ReceitaViewModel(1, "Arroz negro à brasileira", "../imagens/arroznegro.jpg", "imagem de arroz negro à brasileira", "Salgado", "America", "https://www.youtube.com/embed/diKgUdmj0m8", "10 min", "2 porções", 0, 0),
-            new ReceitaViewModel(2, "Tartar de salmão, manga e avocado", "../imagens/tartar.jpg", "imagem de tartar de salmão, manga e avocado", "Salgado", "Africa", "https://www.youtube.com/embed/OhiMLGrulKk", "10 min", "2 porções", 0, 0),
-            new ReceitaViewModel(3, "Torta de abóbora de noz e pecã", "../imagens/torta-abobora-nozes.png", "imagem de torta de abóbora de noz e pecã", "Doce", "Asia", "https://www.youtube.com/embed/Pv6qx9nnBHg", "10 min", "2 porções", 0, 0),
-            new ReceitaViewModel(4, "Dakos", "../imagens/dakos.png", "imagem de dakos", "Salgado", "Europa", "https://www.youtube.com/embed/fzBkeChLJL8", "10 min", "2 porções", 0, 0)
+            new ReceitaViewModel(2, "Tartar de salmão, manga e avocado", "../imagens/tartar.jpg", "imagem de tartar de salmão, manga e avocado", "Salgado", "Africa", "https://www.youtube.com/embed/OhiMLGrulKk", "50 min", "3 porções", 0, 0),
+            new ReceitaViewModel(3, "Torta de abóbora de noz e pecã", "../imagens/torta-abobora-nozes.png", "imagem de torta de abóbora de noz e pecã", "Doce", "Asia", "https://www.youtube.com/embed/Pv6qx9nnBHg", "60 min", "6 porções", 0, 0),
+            new ReceitaViewModel(4, "Dakos", "../imagens/dakos.png", "imagem de dakos", "Salgado", "Europa", "https://www.youtube.com/embed/fzBkeChLJL8", "30 min", "2 porções", 0, 0)
         };
 
     private static List<UsuarioViewModel> usuarios = new List<UsuarioViewModel>{

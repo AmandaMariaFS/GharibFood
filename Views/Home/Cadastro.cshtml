@@ -37,7 +37,7 @@
                 <form action="/Home/CadastroResultado" method="post">
                     <div class="input-group">
                         <label for="nome">Nome Completo</label>
-                        <input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo" required>
+                        <input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo" required maxlength="14">
                     </div>
 
                     <div class="input-group">
@@ -47,12 +47,12 @@
 
                     <div class="input-group">
                         <label for="nomeusuario">Nome de usuário</label>
-                        <input type="text" id="nomeusuario" name="nomeusuario" placeholder="Digite o seu nome de usuário" required>
+                        <input type="text" id="nomeusuario" name="nomeusuario" placeholder="Digite o seu nome de usuário" required maxlength="14">
                     </div>
 
                     <div class="input-group w50">
-                        <label for="senha">Senha</label>
-                        <input type="password" id="senha" name="senha"  placeholder="Digite sua senha" required>
+                        <label for="senha">Senha (no mínimo 5 caracteres)</label>
+                        <input type="password" id="senha" name="senha"  placeholder="Digite sua senha" required minlength="5">
                     </div>
 
                     <div class="input-group">
