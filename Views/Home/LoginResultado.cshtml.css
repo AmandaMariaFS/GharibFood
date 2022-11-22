@@ -117,6 +117,15 @@ form .input-group button{
     padding: 30px 40px;
     width: 70%;
     border-radius: 0 20px 20px 0;
+    display: table;
+}
+
+.form-box h2{
+    font-size: 30px;
+    color: #f89804;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
 }
 
 .botao-cadastro-log{
@@ -131,7 +140,8 @@ form .input-group button{
 
 .div-botao-resultado{
     display: flexbox;
-    margin-top: 30vh;
+    bottom: 0;
+
 }
 
 .botao-resultado{

@@ -1,0 +1,41 @@
+.body-receita{
+    background-color: #E5E5E5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 5vh;
+    display: flexbox;
+    place-items: center;
+}
+
+label{
+    text-align: center;
+    margin: 35px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+textarea{
+    resize: none;
+}
+
+.box-ini{
+    width: 60%;
+    background-color: #FFFFFF;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px 2px grey;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-gap: 5vh;
+    place-items: center;
+    display: flexbox;
+    justify-content: center;
+}
+
+#primeira-box-ini{
+    margin-top: 7vh;
+}

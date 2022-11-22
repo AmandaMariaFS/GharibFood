@@ -1,0 +1,23 @@
+@model List<GharibFood.ViewModels.ReceitaViewModel>
+
+@{
+    ViewData["Title"] = "Comentar";
+    Layout = "_Layout";
+}
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/GharibFood.styles.css" asp-append-version="true" />
+
+<body>
+    <div class="body-receita">
+        <div class="box-ini" id="primeira-box-ini">
+            <form name="Comentar" action="#" method="get">
+                <label for="coment">Comente o que você achou da receita:</label>
+
+                <textarea name="comentarios" id="coment" cols="50" rows="8" maxlength="300"></textarea>
+
+                <input type="submit" value="Comentar">
+            </form>
+        </div>
+    </div>
+</body>
