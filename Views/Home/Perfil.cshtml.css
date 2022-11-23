@@ -6,6 +6,27 @@
 .info{
     width: 35%;
 }
+.botao a{
+  color: black;
+  text-decoration: none;
+}
+
+.botao{
+  width: 300px;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 2px solid black;
+  text-align: center;
+  transition: all 0.4s ease;
+  margin: 0 auto;
+  margin-top: 20vh;
+  font-size: 18px;
+}
+
+.botao:hover{
+  background-color: #E9B85B;
+  border: 2px solid transparent;
+}
 
 .wrapper{
     width: 90%;
@@ -83,7 +104,7 @@
   
   .wrapper .left .info_data .data p,
   .wrapper .right .projects_data .data p{
-    font-size: 13px;
+    font-size: 18px;
     margin-bottom: 10px;
   }
   

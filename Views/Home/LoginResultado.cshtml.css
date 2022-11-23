@@ -136,15 +136,16 @@ form .input-group button{
     align-items: center;
     justify-content: center;
     margin-top: 15vh;
+   
 }
 .botao-resultado{
     text-align: center;
-    width: 200px;
+    width: 300px;
     height: 30px;
     background-color: transparent;
     border-radius: 18px;
     border: 2px solid black;
-    font-size: 16px;
+    font-size: 19px;
     color: black;
     cursor: pointer;
     transition: all 0.4s ease;
