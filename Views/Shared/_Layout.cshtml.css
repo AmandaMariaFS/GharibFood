@@ -8,6 +8,11 @@ for details on configuring this project to bundle and minify static web assets. 
     src: url("fonts/Poppins-Medium.ttf"); 
  }
 
+.name-logo h1{
+  margin-top: 0px;
+  margin-left: 20px;
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -105,7 +110,7 @@ button.accept-policy {
 }
 
 #ficaBonito{
-  margin: 40px;
+  margin-top: 20px;
 }
 
 .icon-cadastro-login{

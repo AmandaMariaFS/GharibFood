@@ -11,7 +11,18 @@
 <body>
     <header>
         <div class="header">
-            <a href="/Home/Index?user=@ViewBag.user" class="logo"><img src="/imagens/logo-minimizado.png" alt="logotipo do site"></a>
+            @* <div class="name-logo">
+                <a href="/Home/Index?user=@ViewBag.user" class="logo"><img src="/imagens/logo-minimizado.png" alt="logotipo do site"></a>
+                <h3>GharibFood</h3>
+            </div> *@
+
+            <table class="name-logo">
+                <tr>
+                    <td><a href="/Home/Index?user=@ViewBag.user" class="logo"><img src="/imagens/logo-minimizado.png" alt="logotipo do site"></td>
+                    <td><h1>GharibFood</h1></td>
+                </tr>
+            </table>
+            
             <div class="caixa-de-pesquisa">
                 <form action="/Home/Search?user=@ViewBag.user" method="get">
                 <input type="text" id="textBusca" name="textBusca" placeholder="Buscar..."/>
