@@ -21,6 +21,7 @@ h1{
     padding: 60px;
     border-radius: 10px;
     box-shadow: 2px 4px 8px 2px grey;
+    text-align: justify;
 }
 
 #primeira-box-ini{
@@ -48,7 +49,7 @@ h3{
     box-shadow: 2px 4px 8px 2px grey;
 }
 
-table{
+.info-receita{
     display: flex;
     justify-content: center;
     text-align: center;
@@ -69,6 +70,21 @@ td{
     color: rgb(209, 133, 103);
 }
 
-.box-ini{
+.comentarios{
+    width: auto;
+    height: auto;
+    background-color: rgb(209, 133, 103);
+    color: black;
+    padding: 40px;
+    border-radius: 10px;
     text-align: justify;
+    vertical-align: middle;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.info-usuario td{
+    width: auto;
+    padding: 10px;
+    color: white;
 }
