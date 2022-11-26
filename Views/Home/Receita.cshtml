@@ -25,7 +25,7 @@
                             <tr>
                                 <td><img src="../imagens/relogio.png" alt="imagem de um temporizador"></td>
                                 <td><img src="../imagens/rendimento.png" alt="imagem ilustrativa rendimento"></td>
-                                <td><img src="../imagens/favorito.png" alt="imagem de um coração"></td>
+                                <td><button id="curtir"><img id="coracao" src="../imagens/favorito.png" alt="imagem de um coração"></button></td>
                                 <td><img src="../imagens/comentarios.png" alt="imagem ilustrativa de comentários"></td>
                                 <td><img src="../imagens/avaliacao.png" alt="imagem ilustrativa de avaliação em 5 estrelas"></td>
                             </tr>
@@ -42,7 +42,7 @@
                             <tr id="info-receita">
                                 <td>@receita.Preparo</td>
                                 <td>@receita.Rendimento</td>
-                                <td>@receita.Favoritos</td>
+                                <td><p class="numeroCurtidas" id="numeroCurtidas">@receita.Favoritos</p></td>
                                 <td>@receita.Comentarios</td>                  
                             </tr>
 
