@@ -13,18 +13,17 @@
 
 .botao{
   width: 300px;
-  background-color: transparent;
+  background-color: #E9B85B;
   border-radius: 20px;
   border: 2px solid black;
   text-align: center;
   transition: all 0.4s ease;
   margin: 0 auto;
-  margin-top: 20vh;
   font-size: 18px;
 }
 
 .botao:hover{
-  background-color: #E9B85B;
+  background-color: #ca9f51;
   border: 2px solid transparent;
 }
 
@@ -68,6 +67,7 @@
     padding: 30px 25px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    overflow: auto;
   }
   
   .wrapper .left .info,
@@ -108,23 +108,21 @@
     margin-bottom: 10px;
   }
   
-  .wrapper .social_media ul{
-    display: flex;
+  .social_media{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 2vh;
+    place-items: center;
+    display: flexbox;
+    justify-content: center;
   }
-  
-  .wrapper .social_media ul li{
-    width: 200px;
-    height: 200px;
-    background: black;
-    margin-right: 10px;
-    border-radius: 5px;
+
+  .receita{
+    width: 180px;
+    height: 180px;
+    background-color: black;
+    position: relative;
+    border-radius: 15px;
+    display: inline-block;
     text-align: center;
-    line-height: 45px;
-    list-style-type: none;
-  }
-  
-  .wrapper .social_media ul li a{
-    color :#fff;
-    display: block;
-    font-size: 18px;
   }
