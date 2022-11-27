@@ -1,6 +1,6 @@
-#GharibFood
+# GharibFood
 
-##Como rodar o site:
+## Como rodar o site:
 
 Clone os códigos presentes no repositório e rode no vscode. No mySql, crie um usuário "estudante" com senha "estudante" e rode no banco de dados "estudante" o seguinte repositório:
 
