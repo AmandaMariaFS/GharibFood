@@ -232,8 +232,22 @@ input:hover{
 
 /* página modal avaliar */
 
+#avaliar{
+    font-size: 17px;
+}
+
+.selecionar-estrela{
+    display: none;
+}
+
+.avaliar label{
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
 .box-ini-avaliar{
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 60px;
     border-radius: 10px;
     box-shadow: 2px 4px 8px 2px grey;

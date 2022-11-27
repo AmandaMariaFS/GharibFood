@@ -40,20 +40,12 @@
                                 </td> *@
 
                                 <td>
-                                    <a href="javascript:void(0)" onclick="Avaliar(1)">
-                                    <img src="../imagens/star0.png" id="s1"></a>
-
-                                    <a href="javascript:void(0)" onclick="Avaliar(2)">
-                                    <img src="../imagens/star0.png" id="s2"></a>
-
-                                    <a href="javascript:void(0)" onclick="Avaliar(3)">
-                                    <img src="../imagens/star0.png" id="s3"></a>
-
-                                    <a href="javascript:void(0)" onclick="Avaliar(4)">
-                                    <img src="../imagens/star0.png" id="s4"></a>
-
-                                    <a href="javascript:void(0)" onclick="Avaliar(5)">
-                                    <img src="../imagens/star0.png" id="s5"></a>
+                                    
+                                    <img src="../imagens/star0.png">
+                                    <img src="../imagens/star0.png">
+                                    <img src="../imagens/star0.png">
+                                    <img src="../imagens/star0.png">
+                                    <img src="../imagens/star0.png">
                                 </td>
                             </tr>
 
@@ -63,7 +55,8 @@
                                 <td>Favoritos</td>
                                 <td>Comentários</td>
                                 @* <td><a href="../Home/Comentar">Comentar</a></td> *@
-                                <td><button id="avaliar"><p id="open-modal-avaliar">Avalie essa receita</p></button></td>
+                                <td><button id="avaliar"><p id="open-modal-avaliar"> <u>Avalie essa receita</u>
+                                </p></button></td>
                             </tr>
 
                             <tr id="info-receita">
@@ -71,7 +64,7 @@
                                 <td>@receita.Rendimento</td>
                                 <td><p class="numeroCurtidas" id="numeroCurtidas">@receita.Favoritos</p></td>
                                 <td>@receita.Comentarios</td>   
-                                <td><p id="rating">0</p></td>               
+                                <td>Avaliação:<p id="rating">0</p></td>               
                             </tr>
 
                         </table>
@@ -204,20 +197,54 @@
         
         
             <div class="modal-avaliar-body">
-                @* <a href="javascript:void(0)" onclick="Avaliar(2)">
-                <img src="../imagens/star0.png" id="s1"></a>
+               <form action="#" method="get">
+                    <table class="avaliar">
+                        <tr>
+                            <td>
+                                <label for="1">
+                                    <img src="../imagens/star0.png" id="s1" onclick="Avaliar(1)"/>
+                                </label>
+                            </td>
 
-                <a href="javascript:void(0)" onclick="Avaliar(3)">
-                <img src="../imagens/star0.png" id="s2"></a>
+                            <td>
+                                <label for="2">
+                                    <img src="../imagens/star0.png" id="s2" onclick="Avaliar(2)"/>
+                                </label>
+                            </td>
 
-                <a href="javascript:void(0)" onclick="Avaliar(4)">
-                <img src="../imagens/star0.png" id="s3"></a>
+                            <td>
+                                <label for="3">
+                                    <img src="../imagens/star0.png" id="s3" onclick="Avaliar(3)"/>
+                                </label>
+                            </td>
 
-                <a href="javascript:void(0)" onclick="Avaliar(5)">
-                <img src="../imagens/star0.png" id="s4"></a>
+                            <td>
+                                <label for="4">
+                                    <img src="../imagens/star0.png" id="s4" onclick="Avaliar(4)"/>
+                                </label>
+                            </td>
 
-                <a href="javascript:void(0)" onclick="Avaliar(6)">
-                <img src="../imagens/star0.png" id="s5"></a> *@
+                            <td>
+                                <label for="5">
+                                    <img src="../imagens/star0.png" id="s5" onclick="Avaliar(5)"/>
+                                </label>
+                            </td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="1" value="1"></td>
+                            <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="2" value="2"></td>
+                            <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="3" value="3"></td>
+                            <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="4" value="4"></td>
+                            <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="5" value="5"></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="5" align="center"><input type="submit" value="Avaliar!" id="avaliar"></td>
+                        </tr>
+                    </table>
+                </form>
             </div>
         </div>
     </div>
