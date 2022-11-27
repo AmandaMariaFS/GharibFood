@@ -155,3 +155,19 @@ const toggleModal = () => {
 [openModalButton, closeModalButton, fade].forEach((el) => {
   el.addEventListener("click", () => toggleModal());
 });
+
+//funcionalidade avaliar modal
+
+const openModalButtonAvaliar = document.querySelector("#open-modal-avaliar");
+const closeModalButtonAvaliar = document.querySelector("#close-modal-avaliar");
+const modalAvaliar = document.querySelector("#modal-avaliar");
+const fadeAvaliar = document.querySelector("#fade-avaliar");
+
+const toggleModalAvaliar = () => {
+  modalAvaliar.classList.toggle("hide");
+  fadeAvaliar.classList.toggle("hide");
+};
+
+[openModalButtonAvaliar, closeModalButtonAvaliar, fadeAvaliar].forEach((el) => {
+  el.addEventListener("click", () => toggleModalAvaliar());
+});

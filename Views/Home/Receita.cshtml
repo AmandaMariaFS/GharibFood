@@ -25,6 +25,7 @@
                             <tr>
                                 <td><img src="../imagens/relogio.png" alt="imagem de um temporizador"></td>
                                 <td><img src="../imagens/rendimento.png" alt="imagem ilustrativa rendimento"></td>
+                                
                                 <td><button id="curtir"><img id="coracao" src="../imagens/favorito.png" alt="imagem de um coração"></button></td>
 
                                 <td><button id="comentar"><img id="open-modal"  src="../imagens/comentarios.png" alt="imagem ilustrativa de comentários"></button></td>
@@ -62,7 +63,7 @@
                                 <td>Favoritos</td>
                                 <td>Comentários</td>
                                 @* <td><a href="../Home/Comentar">Comentar</a></td> *@
-                                <td>Avalie essa receita</td>
+                                <td><button id="avaliar"><p id="open-modal-avaliar">Avalie essa receita</p></button></td>
                             </tr>
 
                             <tr id="info-receita">
@@ -179,5 +180,37 @@
                 </form>
             </div>
       </div>
+    </div>
+
+
+    @* modal do avaliar *@
+    <div id="fade-avaliar" class="hide"></div>
+
+    <div id="modal-avaliar" class="hide">
+
+        <div class="box-ini-avaliar">
+            
+            <div class="modal-header-avaliar">
+                <button id="close-modal-avaliar">Fechar</button>
+            </div>
+        
+        
+            <div class="modal-avaliar-body">
+                @* <a href="javascript:void(0)" onclick="Avaliar(2)">
+                <img src="../imagens/star0.png" id="s1"></a>
+
+                <a href="javascript:void(0)" onclick="Avaliar(3)">
+                <img src="../imagens/star0.png" id="s2"></a>
+
+                <a href="javascript:void(0)" onclick="Avaliar(4)">
+                <img src="../imagens/star0.png" id="s3"></a>
+
+                <a href="javascript:void(0)" onclick="Avaliar(5)">
+                <img src="../imagens/star0.png" id="s4"></a>
+
+                <a href="javascript:void(0)" onclick="Avaliar(6)">
+                <img src="../imagens/star0.png" id="s5"></a> *@
+            </div>
+        </div>
     </div>
 </body>
