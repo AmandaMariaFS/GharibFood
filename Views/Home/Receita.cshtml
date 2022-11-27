@@ -26,9 +26,10 @@
                                 <td><img src="../imagens/relogio.png" alt="imagem de um temporizador"></td>
                                 <td><img src="../imagens/rendimento.png" alt="imagem ilustrativa rendimento"></td>
                                 <td><button id="curtir"><img id="coracao" src="../imagens/favorito.png" alt="imagem de um coração"></button></td>
-                                <td><img src="../imagens/comentarios.png" alt="imagem ilustrativa de comentários"></td>
-                                <td>
-                                    <ul class="avaliacao">
+
+                                <td><button id="comentar"><img id="open-modal"  src="../imagens/comentarios.png" alt="imagem ilustrativa de comentários"></button></td>
+
+                                <td> <ul class="avaliacao">
                                     <li class="star-icon ativo" data-avaliacao="1"></li>
                                     <li class="star-icon" data-avaliacao="2"></li>
                                     <li class="star-icon" data-avaliacao="3"></li>
@@ -136,5 +137,29 @@
                 </div>   
 
         </div>
+    </div>
+
+    @* modal dos comentarios *@
+    <div id="fade" class="hide"></div>
+
+    <div id="modal" class="hide">
+
+        <div class="box-ini-comentar">
+            
+            <div class="modal-header">
+                <button id="close-modal">Fechar</button>
+            </div>
+        
+        
+            <div class="modal-body">
+                <form name="Comentar" action="#" method="get">
+                    <label for="coment">Comente o que você achou da receita:</label>
+
+                    <textarea name="comentarios" id="coment" cols="50" rows="8" maxlength="300"></textarea>
+
+                    <input type="submit" value="Comentar">
+                </form>
+            </div>
+      </div>
     </div>
 </body>
