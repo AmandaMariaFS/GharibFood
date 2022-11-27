@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using GharibFood.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<GharibFoodContext>(options => 
+    options.UseMySQL("server=localhost;database=estudante;user=estudante;password=estudante")
+);
 
 var app = builder.Build();
 

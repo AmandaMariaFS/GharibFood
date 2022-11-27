@@ -1,37 +1,22 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using GharibFood.Models;
-using GharibFood.ViewModels;
 
 namespace GharibFood.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly GharibFoodContext _context;
 
-    private static List<ReceitaViewModel> receitas = 
-        new List<ReceitaViewModel>{
-        new ReceitaViewModel(1, "Arroz negro à brasileira", "../imagens/arroznegro.jpg", "imagem de arroz negro à brasileira", "Salgado", "America", "https://www.youtube.com/embed/diKgUdmj0m8", "10 min", "2 porções", 0, 0),
-            new ReceitaViewModel(2, "Tartar de salmão, manga e avocado", "../imagens/tartar.jpg", "imagem de tartar de salmão, manga e avocado", "Salgado", "Africa", "https://www.youtube.com/embed/OhiMLGrulKk", "50 min", "3 porções", 0, 0),
-            new ReceitaViewModel(3, "Torta de abóbora de noz e pecã", "../imagens/torta-abobora-nozes.png", "imagem de torta de abóbora de noz e pecã", "Doce", "Asia", "https://www.youtube.com/embed/Pv6qx9nnBHg", "60 min", "6 porções", 0, 0),
-            new ReceitaViewModel(4, "Dakos", "../imagens/dakos.png", "imagem de dakos", "Salgado", "Europa", "https://www.youtube.com/embed/fzBkeChLJL8", "30 min", "2 porções", 0, 0)
-        };
-
-    private static List<UsuarioViewModel> usuarios = new List<UsuarioViewModel>{
-        new UsuarioViewModel("Amanda", "amandinhaferre@hotmail.com", "AmandaMariaFS", "EnolaHolmes")
-    };
-
-    bool cadastrado = false;
-
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(GharibFoodContext context)
     {
-        _logger = logger;
+        _context = context;
     }
 
     public IActionResult Index(string user)
     {   
         ViewBag.user = user;
-        return View(receitas);
+        return View(_context.Receitas);
     }
 
     public IActionResult Privacy(string user)
@@ -42,9 +27,9 @@ public class HomeController : Controller
 
     public IActionResult Perfil(string user)
     {
-        foreach (var usuario in usuarios)
+        foreach (var usuario in _context.Usuarios)
         {
-            if (usuario.User == user)
+            if (usuario.Id == user)
             {
                 ViewBag.user = user;
                 ViewBag.nome = usuario.Nome;
@@ -58,7 +43,7 @@ public class HomeController : Controller
     {
         ViewBag.continente = continente;
         ViewBag.user = user;
-        return View(receitas);
+        return View(_context.Receitas);
     }
 
     public IActionResult Cadastro()
@@ -75,34 +60,35 @@ public class HomeController : Controller
     {
         ViewBag.continente = continente;
         ViewBag.user = user;
-        return View(receitas);
+        return View(_context.Receitas);
     }
 
     public IActionResult Search(string textBusca, string user)
     {
         ViewBag.textBusca = textBusca;
         ViewBag.user = user;
-        return View(receitas);
+        return View(_context.Receitas);
     }
 
     public IActionResult Receita(int id, string user)
     {
         ViewBag.id = id;
         ViewBag.user = user;
-        return View(receitas);
+        return View(_context.Receitas.Find(id));
     }
 
-    public IActionResult CadastroResultado(string nome, string email, string nomeusuario, string senha)
+    public IActionResult CadastroResultado(string user, string nome, string email, string senha, string foto)
     {
-        usuarios.Add(new UsuarioViewModel(nome, email, nomeusuario, senha));
-        ViewBag.user = nomeusuario;
+        foto = "../imagens/perfil.png";
+        _context.Usuarios.Add(new Usuario(nome, email, email, senha, foto));
+        ViewBag.user = email;
         return View();
     }
 
     public IActionResult LoginResultado(string email, string senha)
     {
-        UsuarioViewModel user = new UsuarioViewModel();
-        foreach (var usuario in usuarios)
+        Usuario user = new Usuario();
+        foreach (var usuario in _context.Usuarios)
         {
             if (usuario.Email == email && usuario.Senha == senha)
             {

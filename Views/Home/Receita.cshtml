@@ -1,4 +1,4 @@
-@model List<GharibFood.ViewModels.ReceitaViewModel>
+@model GharibFood.Models.Receita
 
 @{
     ViewData["Title"] = "Receita";
@@ -11,75 +11,66 @@
 <body>
     <div class="body-receita">
         <div class="box-ini" id="primeira-box-ini">
-            @foreach (var receita in Model)
-            {
-                if(receita.Id == @ViewBag.id)
-                {
-                    <h1>@receita.Nome</h1>
-                    <div class="video">
-                        <iframe width="560" height="315" src=@receita.Video title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+            <h1>@Model.Nome</h1>
+            <div class="video">
+                <iframe width="560" height="315" src=@Model.Video title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
 
-                    <div> 
-                        <table class="info-receita">
-                            <tr>
-                                <td><img src="../imagens/relogio.png" alt="imagem de um temporizador"></td>
-                                <td><img src="../imagens/rendimento.png" alt="imagem ilustrativa rendimento"></td>
-                                
-                                <td><button id="curtir"><img id="coracao" src="../imagens/favorito.png" alt="imagem de um coração"></button></td>
+            <div> 
+                <table class="info-receita">
+                    <tr>
+                        <td><img src="../imagens/relogio.png" alt="imagem de um temporizador"></td>
+                        <td><img src="../imagens/rendimento.png" alt="imagem ilustrativa rendimento"></td>
+                        
+                        <td><button id="curtir"><img id="coracao" src="../imagens/favorito.png" alt="imagem de um coração"></button></td>
 
-                                <td><button id="comentar"><img id="open-modal"  src="../imagens/comentarios.png" alt="imagem ilustrativa de comentários"></button></td>
+                        <td><button id="comentar"><img id="open-modal"  src="../imagens/comentarios.png" alt="imagem ilustrativa de comentários"></button></td>
 
-                                @* <td> <ul class="avaliacao">
-                                    <li class="star-icon ativo" data-avaliacao="1"></li>
-                                    <li class="star-icon" data-avaliacao="2"></li>
-                                    <li class="star-icon" data-avaliacao="3"></li>
-                                    <li class="star-icon" data-avaliacao="4"></li>
-                                    <li class="star-icon" data-avaliacao="5"></li>
-                                    </ul>
-                                </td> *@
+                        @* <td> <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                            </ul>
+                        </td> *@
 
-                                <td>
+                        <td>
                                     
-                                    <img src="../imagens/star0.png">
-                                    <img src="../imagens/star0.png">
-                                    <img src="../imagens/star0.png">
-                                    <img src="../imagens/star0.png">
-                                    <img src="../imagens/star0.png">
-                                </td>
-                            </tr>
+                            <img src="../imagens/star0.png">
+                            <img src="../imagens/star0.png">
+                            <img src="../imagens/star0.png">
+                            <img src="../imagens/star0.png">
+                            <img src="../imagens/star0.png">
+                        </td>
+                    </tr>
 
-                            <tr>
-                                <td>Preparo</td>
-                                <td>Rendimento</td>
-                                <td>Favoritos</td>
-                                <td>Comentários</td>
-                                @* <td><a href="../Home/Comentar">Comentar</a></td> *@
-                                <td><button id="avaliar"><p id="open-modal-avaliar"> <u>Avalie essa receita</u>
-                                </p></button></td>
-                            </tr>
+                    <tr>
+                        <td>Preparo</td>
+                        <td>Rendimento</td>
+                        <td>Favoritos</td>
+                        <td>Comentários</td>
+                        @* <td><a href="../Home/Comentar">Comentar</a></td> *@
+                        <td><button id="avaliar"><p id="open-modal-avaliar"> <u>Avalie essa receita</u>
+                        </p></button></td>
+                    </tr>
 
-                            <tr id="info-receita">
-                                <td>@receita.Preparo</td>
-                                <td>@receita.Rendimento</td>
-                                <td><p class="numeroCurtidas" id="numeroCurtidas">@receita.Favoritos</p></td>
-                                <td>@receita.Comentarios</td>   
-                                <td>Avaliação:<p id="rating">0</p></td>               
-                            </tr>
+                    <tr id="info-receita">
+                        <td>@Model.Tempo</td>
+                        <td>@Model.Rendimento</td>
+                        <td><p class="numeroCurtidas" id="numeroCurtidas">@Model.Favoritos</p></td>
+                        <td>@Model.Comentarios</td>   
+                        <td>Avaliação:<p id="rating">0</p></td>               
+                    </tr>
 
-                        </table>
-                    </div>
-
-
-                }
-            }
-            
+                </table>
+            </div>   
         </div>
     
         <div class="box-ini">
             <div>
                 <h3>CURIOSIDADES</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet corporis, nesciunt debitis, sit, ut tempore fuga accusamus repellendus iure dolor similique. Praesentium dicta accusantium magni, voluptatibus nostrum blanditiis maiores!</p>
+                <p>@Model.Curiosidade</p>
             </div>
         </div>
 
@@ -108,15 +99,7 @@
                 <h3>MODO DE PREPARO</h3>
 
                 <ol>
-                    <li>Em uma chaleira coloque para ferver 3 xícaras de chá de água.</li>
-
-                    <li>Enquanto isso, em uma panela média, coloque 1 colher de sopa de azeite e em seguida acrescente 2 dente de alho descascado e amassado no amassador de alho.</li>
-
-                    <li> Deixe alourar por 1 minuto e em seguida coloque 1 xícara de chá de arroz preto.</li>
-                    
-                    <li> Junte 1 ou 2 folhas de louro e tempere com sal a gosto. Usei sal grosso, pois o sal grosso mantém todos os minerais importantes para nossa saúde. Assista  aqui o depoimento do Dr Pablo LLompart, falando sobre o assunto.</li>
-
-                    <li> Coloque 3 xícaras de chá de água fervente. Panela semi tampada e em fogo baixo  deixe cozinhar por 50 minutos ou até que os grãos estejam cozidos e macios. Você decide o ponto. Gosto dos grãos mais ‘al dente’, mas se prefere mais macio, só acrescentar um pouquinhos mais de água e deixar mais tempo cozinhando. Ao gosto do chef da casa, você!😉</li>
+                    <li>@Model.Preparo</li>
                 </ol>
             </div>
         </div>

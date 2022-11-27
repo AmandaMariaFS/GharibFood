@@ -1,4 +1,4 @@
-﻿@model List<GharibFood.ViewModels.ReceitaViewModel>
+﻿@model IEnumerable<GharibFood.Models.Receita>
 
 @{
     ViewData["Title"] = "Home";
@@ -24,7 +24,7 @@
             {
                 <a href="/Home/Receita?user=@ViewBag.user&id=@receita.Id">
                 <div class="bloco-receita">
-                    <img src=@receita.CaminhoFoto alt=@receita.DescAlt class="img-link-receita">
+                    <img src=@receita.Imagem alt=@receita.Text_alt class="img-link-receita">
                     <div class="info">
                         <p>@receita.Categoria</p>
                         <h3>@receita.Nome</h3>
