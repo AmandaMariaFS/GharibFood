@@ -53,8 +53,6 @@
 
                                     <a href="javascript:void(0)" onclick="Avaliar(6)">
                                     <img src="../imagens/star0.png" id="s5"></a>
-                                    <p id="rating">0</p>
-                                    
                                 </td>
                             </tr>
 
@@ -64,14 +62,15 @@
                                 <td>Favoritos</td>
                                 <td>Comentários</td>
                                 @* <td><a href="../Home/Comentar">Comentar</a></td> *@
-                                <td rowspan="2">Avalie essa receita</td>
+                                <td>Avalie essa receita</td>
                             </tr>
 
                             <tr id="info-receita">
                                 <td>@receita.Preparo</td>
                                 <td>@receita.Rendimento</td>
                                 <td><p class="numeroCurtidas" id="numeroCurtidas">@receita.Favoritos</p></td>
-                                <td>@receita.Comentarios</td>                  
+                                <td>@receita.Comentarios</td>   
+                                <td><p id="rating">0</p></td>               
                             </tr>
 
                         </table>
