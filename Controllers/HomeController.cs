@@ -31,12 +31,12 @@ public class HomeController : Controller
     public IActionResult Index(string user)
     {   
         ViewBag.user = user;
-        ViewBag.user = user;
         return View(receitas);
     }
 
-    public IActionResult Privacy()
+    public IActionResult Privacy(string user)
     {
+        ViewBag.user = user;
         return View();
     }
 
