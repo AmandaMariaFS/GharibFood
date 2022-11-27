@@ -27,9 +27,9 @@
                 <form action="/Home/Search?user=@ViewBag.user" method="get">
                 <input type="text" id="textBusca" name="textBusca" placeholder="Buscar..."/>
                 <input type="submit" id="submitHeader">
+                <label for="submitHeader"><img src="../imagens/pesquisa.png" id="img-buttonBusca" alt="Buscar"/></label>
                 </form>
                 
-                <img src="../imagens/pesquisa.png" id="img-buttonBusca" alt="Buscar"/>
             </div>
             
             @if (ViewBag.user != null)
