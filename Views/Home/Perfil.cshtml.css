@@ -110,19 +110,62 @@
   
   .social_media{
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 300px 300px;
     grid-gap: 2vh;
     place-items: center;
     display: flexbox;
     justify-content: center;
   }
 
-  .receita{
-    width: 180px;
-    height: 180px;
-    background-color: black;
+  .bloco-receita-salva{
+    margin-top: 1vh;
+    text-align: center;
+    width: 280px;
+    height: 250px;
+    background-color: #E9B85B;
     position: relative;
     border-radius: 15px;
     display: inline-block;
-    text-align: center;
-  }
+}
+
+.img-link-receita-salva{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+  width: 80%;
+  min-height: 150px;
+  max-height: 150px;
+  max-width: 150px;
+  min-width: 200px;
+}
+
+.info-receita-salva{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+}
+
+/* .wrapper .social_media ul li{
+  width: 200px;
+  height: 200px;
+  background: black;
+  margin-right: 10px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 45px;
+  list-style-type: none;
+}
+
+.wrapper .social_media ul li a{
+  color :#fff;
+  display: block;
+  font-size: 18px;
+}
+
+.wrapper .social_media ul{
+  display: flex;
+} */
