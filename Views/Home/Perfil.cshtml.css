@@ -6,6 +6,7 @@
 .info{
     width: 35%;
 }
+
 .botao a{
   color: black;
   text-decoration: none;
@@ -20,6 +21,8 @@
   transition: all 0.4s ease;
   margin: 0 auto;
   font-size: 18px;
+  margin-top: 3vh;
+  height: 30px;
 }
 
 .botao:hover{
@@ -29,7 +32,8 @@
 
 .wrapper{
     width: 90%;
-    height: 60%;
+    margin-top: 4vh;
+    height: 65%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -95,7 +99,7 @@
   .wrapper .right .projects_data .data{
     width: 45%;
   }
-  
+
   .wrapper .left .info_data .data h4,
   .wrapper .right .projects_data .data h4{
       color: #353c4e;
@@ -107,7 +111,34 @@
     font-size: 18px;
     margin-bottom: 10px;
   }
-  
+
+  .data {
+    overflow: auto;
+    max-height: 80px;
+  }
+
+  /* Designing for scroll-bar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: gainsboro;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b38837;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
   .social_media{
     display: grid;
     grid-template-columns: 300px 300px;
@@ -136,8 +167,8 @@
   border-radius: 10px;
   width: 80%;
   min-height: 150px;
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 130px;
+  max-width: 190px;
   min-width: 200px;
 }
 
@@ -148,24 +179,3 @@
   right: 0;
   font-size: 16px;
 }
-
-/* .wrapper .social_media ul li{
-  width: 200px;
-  height: 200px;
-  background: black;
-  margin-right: 10px;
-  border-radius: 5px;
-  text-align: center;
-  line-height: 45px;
-  list-style-type: none;
-}
-
-.wrapper .social_media ul li a{
-  color :#fff;
-  display: block;
-  font-size: 18px;
-}
-
-.wrapper .social_media ul{
-  display: flex;
-} */
