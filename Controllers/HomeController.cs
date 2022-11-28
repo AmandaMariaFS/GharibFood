@@ -78,11 +78,21 @@ public class HomeController : Controller
         return View(_context.Receitas);
     }
 
-    public IActionResult Receita(int id, string user)
+    public IActionResult Receita(int id, string user, string comentarios)
     {
         ViewBag.ingredientes = _context.Ingredientes;
         ViewBag.comentarios = _context.Comentarios;
         ViewBag.user = user;
+
+        if (comentarios != null)
+        {
+            var data = DateTime.Now;
+            var totalComentarios = _context.Comentarios.Count();
+            _context.Comentarios.Add(new Comentario(totalComentarios + 1, user, id, comentarios, Convert.ToString(data)));
+            _context.SaveChanges();
+        }
+
+        comentarios = null;
         return View(_context.Receitas.Find(id));
     }
 
