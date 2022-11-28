@@ -336,3 +336,7 @@ input:hover{
     padding: 10px;
     color: white;
 }
+
+.user{
+    display: none;
+}

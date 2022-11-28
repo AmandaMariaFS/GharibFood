@@ -139,3 +139,7 @@ button.accept-policy {
 #submitHeader{
   display: none;
 }
+
+#user{
+  display: none;
+}

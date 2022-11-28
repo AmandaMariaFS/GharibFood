@@ -140,13 +140,21 @@
         
         
             <div class="modal-body">
-                <form name="Comentar" action="#" method="get">
-                    <label for="coment">Comente o que você achou da receita:</label>
+                @if (ViewBag.user != null)
+                {
+                    <form name="Comentar" action="/Home/Receita" method="post">
+                        <label for="coment">Comente o que você achou da receita:</label>
 
-                    <textarea name="comentarios" id="coment" cols="50" rows="8" maxlength="300"></textarea>
+                        <textarea name="comentarios" id="coment" cols="50" rows="8" maxlength="300"></textarea>
 
-                    <input type="submit" value="Comentar">
-                </form>
+                        <input type="submit" value="Comentar">
+                        <input type="radio" id="user" name="user" class="user" value=@ViewBag.user checked>
+                        <input type="radio" id="id" name="id" class="user" value=@Model.Id checked>
+                    </form>
+                }else{
+                    <h1> É preciso estar logado para comentar </h1>
+                }
+                
             </div>
       </div>
     </div>
@@ -165,54 +173,64 @@
         
         
             <div class="modal-avaliar-body">
-               <form action="#" method="get">
-                    <table class="avaliar">
-                        <tr>
-                            <td>
-                                <label for="1">
-                                    <img src="../imagens/star0.png" id="s1" onclick="Avaliar(1)"/>
-                                </label>
-                            </td>
+                @if (ViewBag.user != null)
+                {
+                    <form action="/Home/Receita" method="post">
+                        <table class="avaliar">
+                            <tr>
+                                <td>
+                                    <label for="1">
+                                        <img src="../imagens/star0.png" id="s1" onclick="Avaliar(1)"/>
+                                    </label>
+                                </td>
 
-                            <td>
-                                <label for="2">
-                                    <img src="../imagens/star0.png" id="s2" onclick="Avaliar(2)"/>
-                                </label>
-                            </td>
+                                <td>
+                                    <label for="2">
+                                        <img src="../imagens/star0.png" id="s2" onclick="Avaliar(2)"/>
+                                    </label>
+                                </td>
 
-                            <td>
-                                <label for="3">
-                                    <img src="../imagens/star0.png" id="s3" onclick="Avaliar(3)"/>
-                                </label>
-                            </td>
+                                <td>
+                                    <label for="3">
+                                        <img src="../imagens/star0.png" id="s3" onclick="Avaliar(3)"/>
+                                    </label>
+                                </td>
 
-                            <td>
-                                <label for="4">
-                                    <img src="../imagens/star0.png" id="s4" onclick="Avaliar(4)"/>
-                                </label>
-                            </td>
+                                <td>
+                                    <label for="4">
+                                        <img src="../imagens/star0.png" id="s4" onclick="Avaliar(4)"/>
+                                    </label>
+                                </td>
 
-                            <td>
-                                <label for="5">
-                                    <img src="../imagens/star0.png" id="s5" onclick="Avaliar(5)"/>
-                                </label>
-                            </td>
-                            
-                        </tr>
+                                <td>
+                                    <label for="5">
+                                        <img src="../imagens/star0.png" id="s5" onclick="Avaliar(5)"/>
+                                    </label>
+                                </td>
+                                
+                            </tr>
 
-                        <tr>
-                            <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="1" value="1"></td>
-                            <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="2" value="2"></td>
-                            <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="3" value="3"></td>
-                            <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="4" value="4"></td>
-                            <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="5" value="5"></td>
-                        </tr>
+                            <tr>
+                                <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="1" value="1"></td>
+                                <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="2" value="2"></td>
+                                <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="3" value="3"></td>
+                                <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="4" value="4"></td>
+                                <td><input type="radio" class="selecionar-estrela" name="avaliacao" id="5" value="5"></td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="5" align="center"><input type="submit" value="Avaliar!" id="avaliar"></td>
-                        </tr>
-                    </table>
-                </form>
+                            <tr>
+                                <td colspan="5" align="center"><input type="submit" value="Avaliar!" id="avaliar"></td>
+                            </tr>
+
+                            <input type="radio" id="user" name="user" class="user" value=@ViewBag.user checked>
+                            <input type="radio" id="id" name="id" class="user" value=@Model.Id checked>
+                        </table>
+                    </form>
+                }else{
+                    <h1> É preciso estar logado para avaliar </h1>
+                }
+
+               
             </div>
         </div>
     </div>

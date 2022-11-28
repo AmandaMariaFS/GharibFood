@@ -24,10 +24,14 @@
             </table>
             
             <div class="caixa-de-pesquisa">
-                <form action="/Home/Search?user=@ViewBag.user" method="get">
+                <form action="/Home/Search" method="get">
                 <input type="text" id="textBusca" name="textBusca" placeholder="Buscar..."/>
                 <input type="submit" id="submitHeader">
                 <label for="submitHeader"><img src="../imagens/pesquisa.png" id="img-buttonBusca" alt="Buscar"/></label>
+                @if (ViewBag.user != null)
+                {
+                    <input type="radio" id="user" name="user" value=@ViewBag.user checked>
+                }
                 </form>
                 
             </div>

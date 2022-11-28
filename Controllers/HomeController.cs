@@ -27,6 +27,8 @@ public class HomeController : Controller
 
     public IActionResult Perfil(string user)
     {
+        ViewBag.user = user;
+        
         List<Int32> favsIds = new List<Int32>();
         foreach (var favorito in _context.Favoritos)
         {
