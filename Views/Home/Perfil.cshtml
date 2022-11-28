@@ -25,17 +25,17 @@
                     <div class="info_data">
                         <div class="data">
                             <h4>Email</h4>
-                            <p>@ViewBag.email</p>
+                            <p>@Model.Email</p>
                         </div>
 
                         <div class="data">
                         <h4>Nome</h4>
-                            <p>@ViewBag.nome</p>
+                            <p>@Model.Nome</p>
                         </div>
 
                         <div class="data">
                             <h4>Nome de usuário</h4>
-                            <p>@ViewBag.user</p>
+                            <p>@Model.Id</p>
                         </div>
                         
                     </div>
@@ -52,22 +52,13 @@
                 
                 @* <h4>Nenhuma receita salva</h4> *@
                 <div class="social_media">
-                    
-                        <a href="#"><div class="receita"><h1> TESTE </h1></div></a>
 
-                        <a href="#"><div class="receita"><h1> TESTE </h1></div></a>
-
-                        <a href="#"><div class="receita"><h1> TESTE </h1></div></a>
-
-                        <a href="#"><div class="receita"><h1> TESTE </h1></div></a>
-
-                        <a href="#"><div class="receita"><h1> TESTE </h1></div></a>
-
-                        <a href="#"><div class="receita"><h1> TESTE </h1></div></a>
-
-                        <a href="#"><div class="receita"><h1> TESTE </h1></div></a>
-
-                        <a href="#"><div class="receita"><h1> TESTE </h1></div></a>
+                    @foreach (var receita in ViewBag.receitasFavs)
+                    {
+                        <a href="/Home/Receita?id=@receita.Id&user=@ViewBag.user"><div class="receita"><h1> @receita.Nome </h1>
+                        @* <img src=@receita.Imagem alt=@receita.Text_alt class="img-link-receita"> *@
+                        </div></a>
+                    }
                          
                 </div> 
                 

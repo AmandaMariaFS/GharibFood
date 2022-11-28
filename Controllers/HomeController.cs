@@ -27,6 +27,21 @@ public class HomeController : Controller
 
     public IActionResult Perfil(string user)
     {
+        List<Int32> favsIds = new List<Int32>();
+        foreach (var favorito in _context.Favoritos)
+        {
+            if (favorito.User == user)
+            {
+                favsIds.Add(favorito.Id_receita);
+            }
+        }
+
+        List<Receita> receitas = new List<Receita>();
+        foreach (var id in favsIds)
+        {
+            receitas.Add(_context.Receitas.Find(id));
+        }
+        ViewBag.receitasFavs = receitas;
         return View(_context.Usuarios.Find(user));
     }
 
