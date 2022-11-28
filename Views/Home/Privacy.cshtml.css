@@ -1,0 +1,53 @@
+
+body{
+    background-image: url(../wwwroot/imagens/c.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+section{
+    display: flex;
+    justify-content: center;
+}
+
+section div{
+    width: 700px;
+    background-color: #f3f3f3;
+    padding: 10px;
+    height: 500px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 4px 8px 2px rgb(44, 37, 37);
+}
+section div-1{
+    width: 700px;
+    background-image: url(../wwwroot/imagens/gostosas.png);
+    padding: 10px;
+    height: 500px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 4px 8px 2px rgb(44, 37, 37);
+}
+div + div-1 {
+    margin-left: 20px;
+}
+h2{
+    font-size: 30px;
+    color: #E9B85B;
+    margin:  0 auto;
+    margin-bottom: 15px;
+    text-align: center;
+}
+p{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+
+                
