@@ -78,18 +78,13 @@
             <div>
                 <h3>INGREDIENTES</h3>
                 <ul>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
+                    @foreach (var ingrediente in ViewBag.ingredientes)
+                    {
+                        @if (ingrediente.Id_receita == Model.Id)
+                        {
+                            <li>@ingrediente.Ing</li>
+                        }
+                    }
                 </ul>
             </div>
         </div>
@@ -99,7 +94,7 @@
                 <h3>MODO DE PREPARO</h3>
 
                 <ol>
-                    <li>@Model.Preparo</li>
+                    @Model.Preparo
                 </ol>
             </div>
         </div>
@@ -109,35 +104,25 @@
             
                 <h3>COMENTÁRIOS</h3>
 
-                <div class="comentarios">
-                    <div>
-                        <table class="info-usuario">
-                            <tr>
-                                <td><a href="/Home/Perfil.cshtml"><img src="../imagens/perfil.png" alt="ícone do perfil" width="25px"></a></td>
-                                <td>Analu</td>
-                                <td>(postado há 20h)</td>
-                            </tr>
-                        </table>
-                    </div>
+                @foreach (var comentario in ViewBag.comentarios)
+                {
+                   @if (comentario.Id_receita == Model.Id)
+                   {
+                       <div class="comentarios">
+                            <div>
+                                <table class="info-usuario">
+                                    <tr>
+                                        <td><img src="../imagens/perfil.png" alt="ícone do perfil" width="25px"></td>
+                                        <td>@comentario.User</td>
+                                        <td>(@comentario.Data)</td>
+                                    </tr>
+                                </table>
+                            </div>
 
-                    <p>Adorei a receita!!</p>
-                </div>   
-
-                <div class="comentarios">
-                    <div>
-                        <table class="info-usuario">
-                            <tr>
-                                <td><a href="/Home/Perfil.cshtml"><img src="../imagens/perfil.png" alt="ícone do perfil" width="25px"></a></td>
-                                <td>Rosa</td>
-                                <td>(postado há 1h)</td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam illum id et rerum eum ex aut quibusdam nobis dolores, autem ipsam nostrum quidem, nesciunt repudiandae recusandae. Maxime rerum nobis corporis?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae similique molestias tempore, rem suscipit eaque! Ab aspernatur vel animi. Maxime provident aliquid assumenda quos laborum obcaecati reiciendis doloribus, corporis magnam?
-                    </p>
-                </div>   
+                            <p>@comentario.Coment</p>
+                        </div> 
+                   } 
+                } 
 
         </div>
     </div>

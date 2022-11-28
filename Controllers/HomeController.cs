@@ -27,16 +27,7 @@ public class HomeController : Controller
 
     public IActionResult Perfil(string user)
     {
-        foreach (var usuario in _context.Usuarios)
-        {
-            if (usuario.Id == user)
-            {
-                ViewBag.user = user;
-                ViewBag.nome = usuario.Nome;
-                ViewBag.email = usuario.Email;
-            }
-        }
-        return View();
+        return View(_context.Usuarios.Find(user));
     }
 
     public IActionResult Salgado(string continente, string user)
@@ -72,7 +63,8 @@ public class HomeController : Controller
 
     public IActionResult Receita(int id, string user)
     {
-        ViewBag.id = id;
+        ViewBag.ingredientes = _context.Ingredientes;
+        ViewBag.comentarios = _context.Comentarios;
         ViewBag.user = user;
         return View(_context.Receitas.Find(id));
     }
@@ -80,8 +72,9 @@ public class HomeController : Controller
     public IActionResult CadastroResultado(string user, string nome, string email, string senha, string foto)
     {
         foto = "../imagens/perfil.png";
-        _context.Usuarios.Add(new Usuario(nome, email, email, senha, foto));
-        ViewBag.user = email;
+        _context.Usuarios.Add(new Usuario(user, nome, email, senha, foto));
+        _context.SaveChanges();
+        ViewBag.user = user;
         return View();
     }
 

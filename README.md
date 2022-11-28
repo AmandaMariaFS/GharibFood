@@ -7,7 +7,7 @@ Site desenvolvido por estudantes do 3º ano do Técnico em informática integrad
 Clone os códigos presentes no repositório e rode no vscode. No mySql, crie um usuário "estudante" com senha "estudante" e rode no banco de dados "estudante" o seguinte repositório:
 
 ```
- USE estudante;
+USE estudante;
 
 CREATE TABLE receitas(
 	id INT PRIMARY KEY,
@@ -46,7 +46,7 @@ CREATE TABLE comentarios(
     user VARCHAR(14) REFERENCES Usuarios(user_name),
     id_receita INT REFERENCES Receitas(id_receita),
     coment VARCHAR(280),
-    data VARCHAR(10)
+    data VARCHAR(30)
 ); 
 
 CREATE TABLE favoritos (
@@ -55,15 +55,15 @@ CREATE TABLE favoritos (
     user VARCHAR(14) REFERENCES Usuarios(user_name)
 ); 
 
+INSERT INTO usuarios
+VALUES('Mandinha', 'Amanda Maria', 'a@gmail.com', '12345', 'Sem foto');
+
 INSERT INTO receitas
 VALUES(1, 'Arroz negro à brasileira', '../imagens/arroznegro.jpg', 
 'imagem de arroz negro à brasileira', 'Salgado', 'America', 'https://www.youtube.com/embed/diKgUdmj0m8',
-'1. Para preparar seu arroz negro, comece por levar ao fogo médio uma panela com o azeite. Quando estiver quente, adicione a cebola e o alho picados e deixe refogar por 2-3 minutos, mexendo de vez em quando, para não deixar queimar.
-
-2. Depois adicione o arroz, sem precisar lavar, e misture com o refogado por 1 minuto - esse é um dos truques para conseguir um arroz soltinho depois de cozinhar! Acrescente as 3 xícaras de água fervente e o sal, baixe um pouco o fogo e tampe a panela.
-
-3. Deixe o arroz negro cozinhar por 20 minutos com a panela tampada ou até a água secar e o arroz estiver cozido. Se a água secar ao fim desse tempo, mas o arroz ainda estiver cru, acrescente mais um pouco de água fervente para terminar de cozinhar. Sirva do jeito que preferir e bom apetite! 
-vou pegar uma curiosidade', 'O arroz negro é um excelente alimento para equilibrar o nível de glicose no sangue e regular 
+'Para preparar seu arroz negro, comece por levar ao fogo médio uma panela com o azeite. Quando estiver quente, adicione a cebola e o alho picados e deixe refogar por 2-3 minutos, mexendo de vez em quando, para não deixar queimar.
+Depois adicione o arroz, sem precisar lavar, e misture com o refogado por 1 minuto - esse é um dos truques para conseguir um arroz soltinho depois de cozinhar! Acrescente as 3 xícaras de água fervente e o sal, baixe um pouco o fogo e tampe a panela.
+Deixe o arroz negro cozinhar por 20 minutos com a panela tampada ou até a água secar e o arroz estiver cozido. Se a água secar ao fim desse tempo, mas o arroz ainda estiver cru, acrescente mais um pouco de água fervente para terminar de cozinhar. Sirva do jeito que preferir e bom apetite!', 'O arroz negro é um excelente alimento para equilibrar o nível de glicose no sangue e regular 
 o intestino. Devido a sua grande quantidade de fibras presente até mesmo em pequenas porções, esse cereal se 
 torna uma ótima fonte para regular as funções do organismo e ainda consegue promover a sensação de saciedade 
 gerada pelos alimentos integrais.', '30 min', '4 porções', 0, 0, 0); 
@@ -72,17 +72,23 @@ INSERT INTO ingredientes
 VALUES(1, 1,  '1 xícara de arroz negro'); 
 
 INSERT INTO ingredientes
-VALUES(1, 2, ' 3 xícaras de água fervente');
+VALUES(2, 1, ' 3 xícaras de água fervente');
 
 INSERT INTO ingredientes
-VALUES(1, 3, '2 colheres de chá de sal');
+VALUES(3, 1, '2 colheres de chá de sal');
 
 INSERT INTO ingredientes
-VALUES(1, 4, '1 cebola picada');
+VALUES(4, 1, '1 cebola picada');
 
 INSERT INTO ingredientes
-VALUES(1, 5, '1 dente de alho picado');
+VALUES(5, 1, '1 dente de alho picado');
 
 INSERT INTO ingredientes
-VALUES(1, 6, '1 fio de azeite de oliva');
+VALUES(6, 1, '1 fio de azeite de oliva');
+
+INSERT INTO comentarios
+VALUES(1, 'Analu', 1, 'Adorei essa receita', CONVERT(sysdate(), CHAR));
+
+INSERT INTO comentarios
+VALUES(2, 'Mandinha', 1, 'MDS ESSE SITE É MUITO BOM!!! MERECE NOTA 10', CONVERT(sysdate(), CHAR));
 ```
