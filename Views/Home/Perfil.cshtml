@@ -50,62 +50,21 @@
                 <h3>Receitas salvas</h3>
 
                 <div class="social_media">
-                    <a href="/Home/Index">
-                        <div class="bloco-receita-salva">
-                            <img src="../imagens/arroznegro.jpg" alt=imagem class="img-link-receita-salva">
-                            <div class="info-receita-salva">
-                                <p>Salgado</p>
-                                <h4>Arroz negro a brasileira</h4>
+                    @foreach (var receita in ViewBag.receitasFavs)
+                    {
+                        <a href="/Home/Receita?id=@receita.Id&user=@ViewBag.user">
+                            <div class="bloco-receita-salva">
+                                <img src=@receita.Imagem alt=imagem class="img-link-receita-salva">
+                                <div class="info-receita-salva">
+                                    <p>@receita.Categoria</p>
+                                    <h4>@receita.Nome</h4>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-
-                    <a href="/Home/Index">
-                        <div class="bloco-receita-salva">
-                            <img src="../imagens/tartar.jpg" alt=imagem class="img-link-receita-salva">
-                            <div class="info-receita-salva">
-                                <p>Salgado</p>
-                                <h4>Tartar de salmão, manga e avocado</h4>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="/Home/Index">
-                        <div class="bloco-receita-salva">
-                            <img src="../imagens/torta-abobora-nozes.png" alt=imagem class="img-link-receita-salva">
-                            <div class="info-receita-salva">
-                                <p>Doce</p>
-                                <h4>Torta de abóbora, nozes e pecã</h4>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="/Home/Index">
-                        <div class="bloco-receita-salva">
-                            <img src="../imagens/dakos.png" alt=imagem class="img-link-receita-salva">
-                            <div class="info-receita-salva">
-                                <p>Salgado</p>
-                                <h4>Dakos</h4>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    }
                 </div>
             
             </div>
-
-                
-                
-                @* <h4>Nenhuma receita salva</h4> *@
-                <div class="social_media">
-
-                    @foreach (var receita in ViewBag.receitasFavs)
-                    {
-                        <a href="/Home/Receita?id=@receita.Id&user=@ViewBag.user"><div class="receita"><h1> @receita.Nome </h1>
-                        @* <img src=@receita.Imagem alt=@receita.Text_alt class="img-link-receita"> *@
-                        </div></a>
-                    }
-                         
-                </div> 
                  
             </div>
         </div>
