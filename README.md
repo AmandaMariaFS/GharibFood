@@ -9,7 +9,7 @@ Clone os códigos presentes no repositório e rode no vscode. No mySql, crie um 
 ```
 USE estudante;
 
-CREATE TABLE receitas(
+CREATE TABLE Receitas(
 	id INT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     imagem VARCHAR(100),
@@ -26,14 +26,14 @@ CREATE TABLE receitas(
     comentarios INT
 ); 
 
-CREATE TABLE ingredientes(
+CREATE TABLE Ingredientes(
 	id INT PRIMARY KEY,
 	id_receita INT REFERENCES Receitas(id_receita),
     ing VARCHAR(130)
-); 
+);
 
 
-CREATE TABLE usuarios(
+CREATE TABLE Usuarios(
 	id VARCHAR(14) PRIMARY KEY,
     nome VARCHAR(200) NOT NULL,
     email VARCHAR(200) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE usuarios(
     foto VARCHAR(100)
 );  
 
-CREATE TABLE comentarios(
+CREATE TABLE Comentarios(
 	id INT PRIMARY KEY,
     user VARCHAR(14) REFERENCES Usuarios(user_name),
     id_receita INT REFERENCES Receitas(id_receita),
@@ -49,16 +49,16 @@ CREATE TABLE comentarios(
     data VARCHAR(30)
 ); 
 
-CREATE TABLE favoritos (
+CREATE TABLE Favoritos (
 	id INT PRIMARY KEY,
 	id_receita INT REFERENCES Receitas(id_receita),
     user VARCHAR(14) REFERENCES Usuarios(user_name)
 ); 
 
-INSERT INTO usuarios
+INSERT INTO Usuarios
 VALUES('Mandinha', 'Amanda Maria', 'a@gmail.com', '12345', 'Sem foto');
 
-INSERT INTO receitas
+INSERT INTO Receitas
 VALUES(1, 'Arroz negro à brasileira', '../imagens/arroznegro.jpg', 
 'imagem de arroz negro à brasileira', 'Salgado', 'America', 'https://www.youtube.com/embed/diKgUdmj0m8',
 'Para preparar seu arroz negro, comece por levar ao fogo médio uma panela com o azeite. Quando estiver quente, adicione a cebola e o alho picados e deixe refogar por 2-3 minutos, mexendo de vez em quando, para não deixar queimar.
@@ -68,36 +68,36 @@ o intestino. Devido a sua grande quantidade de fibras presente até mesmo em peq
 torna uma ótima fonte para regular as funções do organismo e ainda consegue promover a sensação de saciedade 
 gerada pelos alimentos integrais.', '30 min', '4 porções', 1, 5, 2); 
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(1, 1,  '1 xícara de arroz negro'); 
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(2, 1, ' 3 xícaras de água fervente');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(3, 1, '2 colheres de chá de sal');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(4, 1, '1 cebola picada');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(5, 1, '1 dente de alho picado');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(6, 1, '1 fio de azeite de oliva');
 
-INSERT INTO comentarios
+INSERT INTO Comentarios
 VALUES(1, 'Analu', 1, 'Adorei essa receita', CONVERT(sysdate(), CHAR));
 
-INSERT INTO comentarios
+INSERT INTO Comentarios
 VALUES(2, 'Mandinha', 1, 'MDS ESSE SITE É MUITO BOM!!! MERECE NOTA 10', CONVERT(sysdate(), CHAR));
 
-INSERT INTO favoritos
+INSERT INTO Favoritos
 VALUES(1, 1, 'Mandinha');
 
 /* Tartar */
 
-INSERT INTO receitas
+INSERT INTO Receitas
 VALUES(2, 'Tartar de salmão, manga e avocado', '../imagens/tartar.jpg', 
 'imagem de tartar de salmão, manga e avocado', 'Salgado', 'Africa', 'https://www.youtube.com/embed/OhiMLGrulKk',
 'Comece por limpar bem o salmão, removendo a sua pele completamente, e cortá-lo em pequenos cubos de aproximadamente 1 cm de cada lado.
@@ -109,33 +109,33 @@ Passado o tempo de descanso, retire o salmão marinado da geladeira. O tartar de
 'Um dos ingredientes desse tartar é o salmão: um alimento que é rico em ômega 3, possui ação antiinflamatória, beneficia o controle do colesterol e a saúde mental. Além disso,  pode ser uma boa fonte de iodo, cuidando da saúde da tireoide.', 
 '1h30', '6 porções', 0, 5, 0);
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(7, 2, '½ quilograma de Salmão fresco');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(8, 2, '2 Abacates');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(9, 2, '1 Cebola');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(10, 2, '1 Manga');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(11, 2, '1 Limão');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(12, 2, '1 colher de café de Mostarda');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(13, 2, '4 colheres de sopa de Shoyu');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(14, 2, '2 colheres de sopa de Azeite de oliva');
 
 /* Torta de abobora de noz e peca */
 
-INSERT INTO receitas
+INSERT INTO Receitas
 VALUES(3, 'Torta de abóbora de noz e pecã', '../imagens/torta-abobora-nozes.png', 
 'imagem de torta de abóbora de noz e pecã', 'Doce', 'America', 'https://www.youtube.com/embed/Pv6qx9nnBHg',
 'Pré-aqueça o forno (215 ° C), enfarinhe sua superfície de trabalho e estenda sua massa de torta em um disco de 14 polegadas.
@@ -149,36 +149,36 @@ Retire a torta do forno e deixe esfriar completamente antes de servir.',
 'Um dos principais ingredientes desta deliciosa torta são as nozes. Elas que são um ingrediente típico do inverno, acumulam muitas calorias e já foram consideradas inimigas da alimentação humana por serem ricas em gorduras. Atualmente, contudo, elas passaram a ser recomendadas por trazerem o grande 
 benefício à saúde de ajudar a controlar o colesterol ruim e, assim, proteger o coração;  podem compor tanto receitas doces quanto salgadas.', '55 min', '6 porções', 0, 5, 0);
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(15, 3, '1 massa de torta de manteiga (ou use uma massa comprada em loja)');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(16, 3, '1 taça purê de abóbora');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(17, 3, '3 ovos (à temperatura ambiente)');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(18, 3, '⅓ de copo de açúcar');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(19, 3, '2 colher de sopa açúcar mascavado claro (embalado)');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(20, 3, '3 colher de sopa manteiga (derretido, dividido)');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(21, 3, '½ de copo de xarope de milho');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(22, 3, '½ colher de sopa extrato de baunilha');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(23, 3, '1 copo de nozes picadas');
 
 /* Dakos */
 
-INSERT INTO receitas
+INSERT INTO Receitas
 VALUES(4, 'Dakos', '../imagens/dakos.png', 
 'imagem de Dakos', 'Salgado', 'Europa', 'https://www.youtube.com/embed/fzBkeChLJL8',
 'Reúna os ingredientes.
@@ -189,27 +189,27 @@ Espalhe o tomate coado e ralado no pão e cubra com queijo. Polvilhe com a pimen
 mediterrâneos muito comuns não somente na Grécia, mas em outros países como a Itália e a Turquia. A culinária grega é muito apreciada por diversas 
 pessoas porque seus ingredientes possuem muitas verduras e temperos simples como o azeite e ervas aromáticas.', '15 min', '60 porções', 0, 5, 0);
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(24, 4, '1 fatia de pão de cevada torrado de 10cm de diâmetro com 1,5cm de altura');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(25, 4, '2 tomates sem pele');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(26, 4, '3 colheres de sopa de queijo feta ');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(27, 4, '3 colheres de chá de azeite extra-virgem');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(28, 4, 'Pimenta preta moída na hora, a gosto');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(29, 4, 'Orégano a gosto');
 
 /* MAKROUT */
 
-INSERT INTO receitas
+INSERT INTO Receitas
 VALUES(5, 'Markrout', '../imagens/markrout.png', 'Imagem do markrout', 'Doce', 'Africa', 
 'https://www.youtube.com/embed/0UxaYP7SsrM', 'Baseado em semolina, a preparação destes bolos ghiotto 
 issimi prevê a utilização de ingredientes muito suculentos e ajuda Makroud a dar um aroma e sabor irresistível. 
@@ -223,77 +223,77 @@ xícaras de farinha de aveia, em seguida, misture adicionando um pouco de água 
  'Uma especialidade típica da cidade tunisiana de Kairouan e que se espalhou para várias partes do norte da África, como Argélia e partes da Líbia, um ranking da especialidade como 
  um património mundial.', '30 min', '6 porções', 0, 5, 0);
  
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(30, 5, '800g de sêmola média');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(31, 5, '30 g de açúcar');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(32, 5, '1 pitada de sal');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(33, 5, '1 tigela de manteiga derretida');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(34, 5, '250g de tâmaras em pasta');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(35, 5, '1 colher de chá de canela');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(36, 5, '2 colheres de sopa de flor de laranjeira');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(37, 5, 'mel');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(38, 5, 'óleo para fritar');
 
 /* Zaalouk */
 
-INSERT INTO receitas
+INSERT INTO Receitas
 VALUES(6, 'Zaalouk', '../imagens/zaalouk.png', 'Imagem do Zaalouk', 'Salgado', 'Africa', 
 'https://www.youtube.com/embed/CwAv1s3JKbw', 'Leve ao fogo uma frigideira grande, adicione a manteiga ghee e doure os dentes de alho picados; acrescente as berinjelas cortadas em cubos e quando elas murcharem adicione os tomates picados em cubos  e o alho poró fatiado, misture bem e acrescente a páprica defumada, sal ,o cominho , 
 o açafrão e, o segredinho 1/2 limão espremido.', 'O zaalouk é uma comida típica do Marrocos que você vai encontrar em todos os cantos do país. Servida com pão, esta pasta é saboreada em qualquer período 
 do dia.', '1h05', '8 porções', 0, 5, 0);
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(39, 6, '1 - 2 onças de berinjela, carbonizada (aprox. 2 lbs)');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(40, 6, '½  de azeite extra virgem, mais extra para untar');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(41, 6, '5 dentes de alho');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(42, 6, '2 tomates em cubos enlatados ou  picados');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(43, 6, '1 ½ colher de chá de páprica');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(44, 6, '½ colher de chá de cominho moído');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(45, 6, '½ colher de chá de açafrão moído');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(46, 6, '½ colher de chá de sal, a gosto');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(47, 6, '⅛ colher de chá de pimenta-do-reino moída, a gosto');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(48, 6, '½ de limão espremido');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(49, 6, 'folhas de salsa ou  coentro, para decorar');
 
 /* Coquitos */
 
-INSERT INTO receitas
+INSERT INTO Receitas
 VALUES(7, 'Coquitos', '../imagens/coquitos.png', 'Imagem dos coquitos', 'Doce', 'America', 
 'https://www.youtube.com/embed/yhXG2zokAhM', 'Em um recipiente, misture bem a manteiga com o açúcar, acrescente os ovos, o creme de confeiteiro, o coco ralado e a essência de baunilha.
 Trabalhe até que todos os ingredientes estejam integrados.
@@ -302,27 +302,27 @@ Quando saírem do forno, pinte-os com geléia de damasco.
 ', 'Os coquitos, também conhecidos como bolinhos de coco assados, são um doce ideal com o qual costumamos acompanhar a refeição após o jantar. Esse doce é tradicional em várias regiões do mundo, 
 especialmente na América Latina e em Angola.', '15 min', '20 porções', 0, 5, 0);
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(50, 7, '200 g manteiga');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(51, 7, '250 g açúcar');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(52, 7, '5 ovos');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(53, 7, '250 g creme pasteleiro');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(54, 7, '300 g coco ralado');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(55, 7, 'Extrato de baunilha');
 
 /* Pique Macho */
 
-INSERT INTO receitas
+INSERT INTO Receitas
 VALUES(8, 'Pique Macho', '../imagens/pique.png', 'Imagem do Pique Macho', 'Salgado', 'America', 
 'https://www.youtube.com/embed/LnBarfQp830', 'Corte o filé em tiras não muito finas, tempere com o limão, cheiro verde, aji-no-moto, sal a gosto e a pimenta calabresa (deixe a carne por pelo menos 1 hora nesta solução).
 Corte a salsicha em rodelas e reserve.
@@ -332,42 +332,42 @@ Em um refratário ou bandeja, coloque as batatas fritas e despeje a carne e as v
 ', 'O "pique" faz referência à maneira que a carne bovina é servida (toda picadinha) e "a lo macho", à virilidade da pessoa que vai provar o prato, isso porque, no país de origem, a comida vem coberta por uma pimenta fortíssima que só "machos" conseguem comer.
 ', '60 min', '8 porções', 0, 5, 0);
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(56, 8, '1 filé');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(57, 8, '2 pacotes de salsicha');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(58, 8, '4 cebolas');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(59, 8, '1 cebolinha (cheiro verde)');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(67, 8, '2 pimentões vermelhos');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(61, 8, '2 pimentões amarelos');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(62, 8, '2 pimentões verdes');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(63, 8, '5 tomates');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(64, 8, '1 kg de batatas');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(65, 8, '5 limões');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(66, 8, '6 ovos');
 
 /* Basbousa */
 
-INSERT INTO receitas
+INSERT INTO Receitas
 VALUES(9, 'Basbousa', '../imagens/basbousa.png', 'Imagem Basbousa', 'Doce', 'Asia', 
 'https://www.youtube.com/embed/2Xpqkq9L_Uk', 'Misture a semolina, o fermento, 1/2 xícara de açúcar e as amêndoas picadas até ficar homogêneo. Junte o iogurte, o óleo vegetal e a água de rosas até formar uma massa macia. Cubra a tigela com filme plástico e deixe descansar em temperatura ambiente por 30 minutos.
 Pré-aqueça o forno a 350 graus F (175 graus C). Pressione a massa em uma assadeira quadrada de 25 centímetros e alise a superfície. Marque a parte superior da massa para criar 15 quadrados de 1 polegada e, em seguida, cubra cada quadrado com uma metade de amêndoa.
@@ -376,39 +376,38 @@ Enquanto o basbousa está esfriando, coloque água e 2 xícaras de açúcar em u
 Para servir, corte o basbousa quente em 15 quadrados e coloque em uma travessa grande; despeje a calda de água de rosas por cima, certificando-se de que todos os pedaços estejam úmidos.
 ', 'Tradicionalmente também se pode adicionar um pouco de coco.', '1h40', '6 porções', 0, 5, 0);
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(69, 9, '1 xícara de farinha de semolina');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(70, 9, '1 ½ colher de chá de fermento em pó');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(71, 9, '½ xícara de açúcar branco');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(72, 9, '½ xícara de amêndoas picadas');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(73, 9, '½ xícara de iogurte natural com leite integral');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(74, 9, '½ xícara de óleo vegetal');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(75, 9, '1 colher de sopa de água de rosas');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(76, 9, '15 metades de amêndoas escaldadas para enfeitar');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(77, 9, '1 xícara de água');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(78, 9, '2 xícaras de açúcar branco');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(79, 9, '1 colher de chá de água de rosas');
 
-INSERT INTO ingredientes
+INSERT INTO Ingredientes
 VALUES(80, 9, '1 colher de chá de suco de limão');
-```
