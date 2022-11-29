@@ -179,7 +179,7 @@ VALUES(23, 3, '1 copo de nozes picadas');
 /* Dakos */
 
 INSERT INTO receitas
-VALUES(5, 'Dakos', '../imagens/dakos.png', 
+VALUES(4, 'Dakos', '../imagens/dakos.png', 
 'imagem de Dakos', 'Salgado', 'Europa', 'https://www.youtube.com/embed/fzBkeChLJL8',
 'Reúna os ingredientes.
 Pulverize a fatia de pão com água para umedecer.
@@ -207,5 +207,208 @@ VALUES(28, 4, 'Pimenta preta moída na hora, a gosto');
 INSERT INTO ingredientes
 VALUES(29, 4, 'Orégano a gosto');
 
-/* */
+/* MAKROUT */
+
+INSERT INTO receitas
+VALUES(5, 'Markrout', '../imagens/markrout.png', 'Imagem do markrout', 'Doce', 'Africa', 
+'https://www.youtube.com/embed/0UxaYP7SsrM', 'Baseado em semolina, a preparação destes bolos ghiotto 
+issimi prevê a utilização de ingredientes muito suculentos e ajuda Makroud a dar um aroma e sabor irresistível. 
+Depois de uma dúzia de dates pitted, cortá-los em pedaços, é necessário para preparar uma mistura que inclui em 
+sua primeira fase, um banho de água para dissolver metade de um copo de ghee (manteiga clarificada, ou manteiga, 
+a água privada, típica da Índia e da Ásia) 1⁄2 xícara de margarina, em seguida, adicione uma pitada de sal e três 
+xícaras de farinha de aveia, em seguida, misture adicionando um pouco de água de cada vez para que a massa é bastante
+ substancial. Mais uma vez, formar cilindros longos em que você deve inserir a data ou a amêndoa, os pequenos cilindros devem 
+ ser cortadas na diagonal para a mistura dando assim uma forma elegante, pronto para ser cozido em uma panela ao fogo baixo, até 
+ que tome uma boa cor dourada . Finalmente, o makroud deve ser imerso numa mistura de mel e de água quente antes de ser deixado a arrefecer e pronto para ser saboreado.', 
+ 'Uma especialidade típica da cidade tunisiana de Kairouan e que se espalhou para várias partes do norte da África, como Argélia e partes da Líbia, um ranking da especialidade como 
+ um património mundial.', '30 min', '6 porções', 0, 5, 0);
+ 
+INSERT INTO ingredientes
+VALUES(30, 5, '800g de sêmola média');
+
+INSERT INTO ingredientes
+VALUES(31, 5, '30 g de açúcar');
+
+INSERT INTO ingredientes
+VALUES(32, 5, '1 pitada de sal');
+
+INSERT INTO ingredientes
+VALUES(33, 5, '1 tigela de manteiga derretida');
+
+INSERT INTO ingredientes
+VALUES(34, 5, '250g de tâmaras em pasta');
+
+INSERT INTO ingredientes
+VALUES(35, 5, '1 colher de chá de canela');
+
+INSERT INTO ingredientes
+VALUES(36, 5, '2 colheres de sopa de flor de laranjeira');
+
+INSERT INTO ingredientes
+VALUES(37, 5, 'mel');
+
+INSERT INTO ingredientes
+VALUES(38, 5, 'óleo para fritar');
+
+/* Zaalouk */
+
+INSERT INTO receitas
+VALUES(6, 'Zaalouk', '../imagens/zaalouk.png', 'Imagem do Zaalouk', 'Salgado', 'Africa', 
+'https://www.youtube.com/embed/CwAv1s3JKbw', 'Leve ao fogo uma frigideira grande, adicione a manteiga ghee e doure os dentes de alho picados; acrescente as berinjelas cortadas em cubos e quando elas murcharem adicione os tomates picados em cubos  e o alho poró fatiado, misture bem e acrescente a páprica defumada, sal ,o cominho , 
+o açafrão e, o segredinho 1/2 limão espremido.', 'O zaalouk é uma comida típica do Marrocos que você vai encontrar em todos os cantos do país. Servida com pão, esta pasta é saboreada em qualquer período 
+do dia.', '1h05', '8 porções', 0, 5, 0);
+
+INSERT INTO ingredientes
+VALUES(39, 6, '1 - 2 onças de berinjela, carbonizada (aprox. 2 lbs)');
+
+INSERT INTO ingredientes
+VALUES(40, 6, '½  de azeite extra virgem, mais extra para untar');
+
+INSERT INTO ingredientes
+VALUES(41, 6, '5 dentes de alho');
+
+INSERT INTO ingredientes
+VALUES(42, 6, '2 tomates em cubos enlatados ou  picados');
+
+INSERT INTO ingredientes
+VALUES(43, 6, '1 ½ colher de chá de páprica');
+
+INSERT INTO ingredientes
+VALUES(44, 6, '½ colher de chá de cominho moído');
+
+INSERT INTO ingredientes
+VALUES(45, 6, '½ colher de chá de açafrão moído');
+
+INSERT INTO ingredientes
+VALUES(46, 6, '½ colher de chá de sal, a gosto');
+
+INSERT INTO ingredientes
+VALUES(47, 6, '⅛ colher de chá de pimenta-do-reino moída, a gosto');
+
+INSERT INTO ingredientes
+VALUES(48, 6, '½ de limão espremido');
+
+INSERT INTO ingredientes
+VALUES(49, 6, 'folhas de salsa ou  coentro, para decorar');
+
+/* Coquitos */
+
+INSERT INTO receitas
+VALUES(7, 'Coquitos', '../imagens/coquitos.png', 'Imagem dos coquitos', 'Doce', 'America', 
+'https://www.youtube.com/embed/yhXG2zokAhM', 'Em um recipiente, misture bem a manteiga com o açúcar, acrescente os ovos, o creme de confeiteiro, o coco ralado e a essência de baunilha.
+Trabalhe até que todos os ingredientes estejam integrados.
+Coloque a massa em uma manga com bico crespo e em um prato untado com manteiga faça beijinhos e leve ao forno até dourar.
+Quando saírem do forno, pinte-os com geléia de damasco.
+', 'Os coquitos, também conhecidos como bolinhos de coco assados, são um doce ideal com o qual costumamos acompanhar a refeição após o jantar. Esse doce é tradicional em várias regiões do mundo, 
+especialmente na América Latina e em Angola.', '15 min', '20 porções', 0, 5, 0);
+
+INSERT INTO ingredientes
+VALUES(50, 7, '200 g manteiga');
+
+INSERT INTO ingredientes
+VALUES(51, 7, '250 g açúcar');
+
+INSERT INTO ingredientes
+VALUES(52, 7, '5 ovos');
+
+INSERT INTO ingredientes
+VALUES(53, 7, '250 g creme pasteleiro');
+
+INSERT INTO ingredientes
+VALUES(54, 7, '300 g coco ralado');
+
+INSERT INTO ingredientes
+VALUES(55, 7, 'Extrato de baunilha');
+
+/* Pique Macho */
+
+INSERT INTO receitas
+VALUES(8, 'Pique Macho', '../imagens/pique.png', 'Imagem do Pique Macho', 'Salgado', 'America', 
+'https://www.youtube.com/embed/LnBarfQp830', 'Corte o filé em tiras não muito finas, tempere com o limão, cheiro verde, aji-no-moto, sal a gosto e a pimenta calabresa (deixe a carne por pelo menos 1 hora nesta solução).
+Corte a salsicha em rodelas e reserve.
+Corte os pimentões, a cebola e 3 tomates em tiras. Cozinhe os ovos e frite as batatas.
+Em uma panela grande, com fogo alto, aqueça o azeite em quantidade suficiente para fritar a carne (no momento da fritura, escorra a carne da solução de limão, deixando-a o mais seca possível). Deixe a carne fritar até o ponto do seu gosto (o caldo que a carne vai soltar deve ser mantido) e acrescente as salsichas. Quando a carne estiver quase no ponto, acrescente as verduras e frite mais um pouco sem deixá-las murchar.
+Em um refratário ou bandeja, coloque as batatas fritas e despeje a carne e as verduras em cima. Corte os ovos cozidos em rodelas e coloque sobre a carne. Faça um quadriculado com a maionese e sirva a seguir. Não necessita de acompanhamento.
+', 'O "pique" faz referência à maneira que a carne bovina é servida (toda picadinha) e "a lo macho", à virilidade da pessoa que vai provar o prato, isso porque, no país de origem, a comida vem coberta por uma pimenta fortíssima que só "machos" conseguem comer.
+', '60 min', '8 porções', 0, 5, 0);
+
+INSERT INTO ingredientes
+VALUES(56, 8, '1 filé');
+
+INSERT INTO ingredientes
+VALUES(57, 8, '2 pacotes de salsicha');
+
+INSERT INTO ingredientes
+VALUES(58, 8, '4 cebolas');
+
+INSERT INTO ingredientes
+VALUES(59, 8, '1 cebolinha (cheiro verde)');
+
+INSERT INTO ingredientes
+VALUES(67, 8, '2 pimentões vermelhos');
+
+INSERT INTO ingredientes
+VALUES(61, 8, '2 pimentões amarelos');
+
+INSERT INTO ingredientes
+VALUES(62, 8, '2 pimentões verdes');
+
+INSERT INTO ingredientes
+VALUES(63, 8, '5 tomates');
+
+INSERT INTO ingredientes
+VALUES(64, 8, '1 kg de batatas');
+
+INSERT INTO ingredientes
+VALUES(65, 8, '5 limões');
+
+INSERT INTO ingredientes
+VALUES(66, 8, '6 ovos');
+
+/* Basbousa */
+
+INSERT INTO receitas
+VALUES(9, 'Basbousa', '../imagens/basbousa.png', 'Imagem Basbousa', 'Doce', 'Asia', 
+'https://www.youtube.com/embed/2Xpqkq9L_Uk', 'Misture a semolina, o fermento, 1/2 xícara de açúcar e as amêndoas picadas até ficar homogêneo. Junte o iogurte, o óleo vegetal e a água de rosas até formar uma massa macia. Cubra a tigela com filme plástico e deixe descansar em temperatura ambiente por 30 minutos.
+Pré-aqueça o forno a 350 graus F (175 graus C). Pressione a massa em uma assadeira quadrada de 25 centímetros e alise a superfície. Marque a parte superior da massa para criar 15 quadrados de 1 polegada e, em seguida, cubra cada quadrado com uma metade de amêndoa.
+Asse em forno pré-aquecido até o topo estufado e dourar, cerca de 20 minutos. O basbousa é feito quando o topo estiver dourado e o centro firmar. Quando terminar, retire do forno e deixe esfriar na assadeira por 20 minutos.
+Enquanto o basbousa está esfriando, coloque água e 2 xícaras de açúcar em uma panela. Leve para ferver e cozinhe por 5 minutos. Junte 1 colher de chá de água de rosas e suco de limão e retire do fogo.
+Para servir, corte o basbousa quente em 15 quadrados e coloque em uma travessa grande; despeje a calda de água de rosas por cima, certificando-se de que todos os pedaços estejam úmidos.
+', 'Tradicionalmente também se pode adicionar um pouco de coco.', '1h40', '6 porções', 0, 5, 0);
+
+INSERT INTO ingredientes
+VALUES(69, 9, '1 xícara de farinha de semolina');
+
+INSERT INTO ingredientes
+VALUES(70, 9, '1 ½ colher de chá de fermento em pó');
+
+INSERT INTO ingredientes
+VALUES(71, 9, '½ xícara de açúcar branco');
+
+INSERT INTO ingredientes
+VALUES(72, 9, '½ xícara de amêndoas picadas');
+
+INSERT INTO ingredientes
+VALUES(73, 9, '½ xícara de iogurte natural com leite integral');
+
+INSERT INTO ingredientes
+VALUES(74, 9, '½ xícara de óleo vegetal');
+
+INSERT INTO ingredientes
+VALUES(75, 9, '1 colher de sopa de água de rosas');
+
+INSERT INTO ingredientes
+VALUES(76, 9, '15 metades de amêndoas escaldadas para enfeitar');
+
+INSERT INTO ingredientes
+VALUES(77, 9, '1 xícara de água');
+
+INSERT INTO ingredientes
+VALUES(78, 9, '2 xícaras de açúcar branco');
+
+INSERT INTO ingredientes
+VALUES(79, 9, '1 colher de chá de água de rosas');
+
+INSERT INTO ingredientes
+VALUES(80, 9, '1 colher de chá de suco de limão');
 ```
