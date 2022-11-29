@@ -78,7 +78,7 @@ public class HomeController : Controller
         return View(_context.Receitas);
     }
 
-    public IActionResult Receita(int id, string user, string comentarios)
+    public IActionResult Receita(int id, string user, string comentarios, string avaliacao)
     {
         ViewBag.ingredientes = _context.Ingredientes;
         ViewBag.comentarios = _context.Comentarios;
@@ -91,9 +91,8 @@ public class HomeController : Controller
             var totalComentarios = _context.Comentarios.Count();
             _context.Comentarios.Add(new Comentario(totalComentarios + 1, user, id, comentarios, Convert.ToString(data)));
             _context.SaveChanges();
+            comentarios = null;
         }
-
-        comentarios = null;
 
         foreach (var comentario in _context.Comentarios)
         {
@@ -104,6 +103,13 @@ public class HomeController : Controller
         }
 
         ViewBag.totalComent = totalComent;
+
+        if (avaliacao != null)
+        {
+            var aval = (_context.Receitas.Find(id).Estrelas + Int16.Parse(avaliacao))/2;
+            _context.Receitas.Find(id).Estrelas = aval;
+            _context.SaveChanges();
+        }
         return View(_context.Receitas.Find(id));
     }
 

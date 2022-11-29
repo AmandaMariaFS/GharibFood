@@ -27,12 +27,60 @@
                         <td><button id="comentar"><img id="open-modal"  src="../imagens/comentarios.png" alt="imagem ilustrativa de comentários"></button></td>
 
                         <td>
-                                    
-                            <img src="../imagens/star0.png">
-                            <img src="../imagens/star0.png">
-                            <img src="../imagens/star0.png">
-                            <img src="../imagens/star0.png">
-                            <img src="../imagens/star0.png">
+                            @if (Model.Estrelas == 0)
+                            {
+                                <img src="../imagens/star0.png">
+                                <img src="../imagens/star0.png">
+                                <img src="../imagens/star0.png">
+                                <img src="../imagens/star0.png">
+                                <img src="../imagens/star0.png">
+                            }  
+
+                            @if (Model.Estrelas == 1)
+                            {
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star0.png">
+                                <img src="../imagens/star0.png">
+                                <img src="../imagens/star0.png">
+                                <img src="../imagens/star0.png">
+                            }  
+
+                            @if (Model.Estrelas == 2)
+                            {
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star0.png">
+                                <img src="../imagens/star0.png">
+                                <img src="../imagens/star0.png">
+                            }        
+
+                            @if (Model.Estrelas == 3)
+                            {
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star0.png">
+                                <img src="../imagens/star0.png">
+                            } 
+
+                            @if (Model.Estrelas == 4)
+                            {
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star0.png">
+                            }     
+
+                            @if (Model.Estrelas == 5)
+                            {
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star1.png">
+                                <img src="../imagens/star1.png">
+                            }    
+                            
                         </td>
                     </tr>
 
@@ -50,7 +98,7 @@
                         <td>@Model.Rendimento</td>
                         <td><p class="numeroCurtidas" id="numeroCurtidas">@Model.Favoritos</p></td>
                         <td>@ViewBag.totalComent</td>   
-                        <td>Avaliação:<p id="rating">0</p></td>               
+                        <td>Avaliação:<p id="rating">@Model.Estrelas</p></td>               
                     </tr>
 
                 </table>
@@ -165,7 +213,7 @@
             <div class="modal-avaliar-body">
                 @if (ViewBag.user != null)
                 {
-                    <form action="/Home/Receita" method="post">
+                    <form action="/Home/Receita" method="get">
                         <table class="avaliar">
                             <tr>
                                 <td>
