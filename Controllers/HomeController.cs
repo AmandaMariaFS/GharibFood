@@ -83,6 +83,7 @@ public class HomeController : Controller
         ViewBag.ingredientes = _context.Ingredientes;
         ViewBag.comentarios = _context.Comentarios;
         ViewBag.user = user;
+        var totalComent = 0;
 
         if (comentarios != null)
         {
@@ -93,6 +94,16 @@ public class HomeController : Controller
         }
 
         comentarios = null;
+
+        foreach (var comentario in _context.Comentarios)
+        {
+            if (comentario.Id_receita == id)
+            {
+                totalComent++;
+            }
+        }
+
+        ViewBag.totalComent = totalComent;
         return View(_context.Receitas.Find(id));
     }
 

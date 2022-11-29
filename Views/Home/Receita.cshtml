@@ -26,15 +26,6 @@
 
                         <td><button id="comentar"><img id="open-modal"  src="../imagens/comentarios.png" alt="imagem ilustrativa de comentários"></button></td>
 
-                        @* <td> <ul class="avaliacao">
-                            <li class="star-icon ativo" data-avaliacao="1"></li>
-                            <li class="star-icon" data-avaliacao="2"></li>
-                            <li class="star-icon" data-avaliacao="3"></li>
-                            <li class="star-icon" data-avaliacao="4"></li>
-                            <li class="star-icon" data-avaliacao="5"></li>
-                            </ul>
-                        </td> *@
-
                         <td>
                                     
                             <img src="../imagens/star0.png">
@@ -50,7 +41,6 @@
                         <td>Rendimento</td>
                         <td>Favoritos</td>
                         <td>Comentários</td>
-                        @* <td><a href="../Home/Comentar">Comentar</a></td> *@
                         <td><button id="avaliar"><p id="open-modal-avaliar"> <u>Avalie essa receita</u>
                         </p></button></td>
                     </tr>
@@ -59,7 +49,7 @@
                         <td>@Model.Tempo</td>
                         <td>@Model.Rendimento</td>
                         <td><p class="numeroCurtidas" id="numeroCurtidas">@Model.Favoritos</p></td>
-                        <td>@Model.Comentarios</td>   
+                        <td>@ViewBag.totalComent</td>   
                         <td>Avaliação:<p id="rating">0</p></td>               
                     </tr>
 
