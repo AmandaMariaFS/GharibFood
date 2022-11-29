@@ -106,7 +106,15 @@ public class HomeController : Controller
 
         if (favoritar == "Sim")
         {
-            _context.Favoritos.Add(new Favorito(_context.Favoritos.Count() + 1, id, user));
+            var maiorId = 0;
+            foreach (var fav in _context.Favoritos)
+            {
+                if (fav.Id > maiorId)
+                {
+                    maiorId = fav.Id;
+                }
+            }
+            _context.Favoritos.Add(new Favorito(maiorId + 1, id, user));
             _context.Receitas.Find(id).Favoritos = _context.Receitas.Find(id).Favoritos + 1;
             _context.SaveChanges();
         }
