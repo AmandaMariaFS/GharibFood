@@ -22,7 +22,18 @@
                         <td><img src="../imagens/relogio.png" alt="imagem de um temporizador"></td>
                         <td><img src="../imagens/rendimento.png" alt="imagem ilustrativa rendimento"></td>
                         
-                        <td><button id="curtir"><img id="coracao" src="../imagens/favorito.png" alt="imagem de um coração"></button></td>
+                        @if (ViewBag.user != null)
+                        {
+                            @if (@ViewBag.favorito == "Nao")
+                            {
+                                <td><a href="/Home/Receita?user=@ViewBag.user&id=@Model.Id&favoritar=Sim"><button id="curtir"><img id="coracao" src="../imagens/favorito.png" alt="imagem de um coração"></button></a></td> 
+                            }else{
+                                <td><a href="/Home/Receita?user=@ViewBag.user&id=@Model.Id&favoritar=Nao"><button id="curtir"><img id="coracao" src="../imagens/favorito-preenchido.png" alt="imagem de um coração"></button></a></td> 
+                            }
+                        }else{
+                            <td><button id="curtir"><img id="coracao" src="../imagens/favorito.png" alt="imagem de um coração"></button></td> 
+                        }
+                        
 
                         <td><button id="comentar"><img id="open-modal"  src="../imagens/comentarios.png" alt="imagem ilustrativa de comentários"></button></td>
 

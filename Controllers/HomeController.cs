@@ -78,12 +78,38 @@ public class HomeController : Controller
         return View(_context.Receitas);
     }
 
-    public IActionResult Receita(int id, string user, string comentarios, string avaliacao)
+    public IActionResult Receita(int id, string user, string comentarios, string avaliacao, string favoritar)
     {
         ViewBag.ingredientes = _context.Ingredientes;
         ViewBag.comentarios = _context.Comentarios;
         ViewBag.user = user;
         var totalComent = 0;
+
+        if (favoritar == "Nao")
+        {
+            var idFav = 0;
+            foreach (var fav in _context.Favoritos)
+            {
+                if (fav.Id_receita == id && fav.User == user)
+                {
+                    idFav = fav.Id;
+                }
+            }
+
+            _context.Favoritos.Remove(_context.Favoritos.Find(idFav));
+            if (_context.Receitas.Find(id).Favoritos > 0)
+            {
+                _context.Receitas.Find(id).Favoritos = _context.Receitas.Find(id).Favoritos - 1;
+            }
+            _context.SaveChanges();
+        }
+
+        if (favoritar == "Sim")
+        {
+            _context.Favoritos.Add(new Favorito(_context.Favoritos.Count() + 1, id, user));
+            _context.Receitas.Find(id).Favoritos = _context.Receitas.Find(id).Favoritos + 1;
+            _context.SaveChanges();
+        }
 
         if (comentarios != null)
         {
@@ -109,7 +135,22 @@ public class HomeController : Controller
             var aval = (_context.Receitas.Find(id).Estrelas + Int16.Parse(avaliacao))/2;
             _context.Receitas.Find(id).Estrelas = aval;
             _context.SaveChanges();
+            avaliacao = null;
         }
+
+        ViewBag.favorito = "Nao";
+
+        if (id != null)
+        {
+            foreach (var fav in _context.Favoritos)
+            {
+                if (fav.Id_receita == id && fav.User == user)
+                {
+                    ViewBag.favorito = "Sim";
+                }
+            }
+        }
+
         return View(_context.Receitas.Find(id));
     }
 
