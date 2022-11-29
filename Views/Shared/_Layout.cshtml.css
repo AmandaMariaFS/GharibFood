@@ -8,6 +8,12 @@ for details on configuring this project to bundle and minify static web assets. 
     src: url("fonts/Poppins-Medium.ttf"); 
  }
 
+ @font-face
+ {
+  font-family: 'Dancing Script', cursive;
+   src: url("fonts/DancingScript-Medium.ttf"); 
+ }
+
 .name-logo h1{
   margin-top: 0px;
   margin-left: 20px;
@@ -142,4 +148,8 @@ button.accept-policy {
 
 #user{
   display: none;
+}
+
+.container{
+  border-style: none;
 }
