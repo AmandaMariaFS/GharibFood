@@ -6,16 +6,16 @@ public class Usuario
     public string Nome { get; set; }
     public string Email { get; set; }
     public string Senha { get; set; }
-    public string Foto { get; set; }
+    public string Tipo { get; set; }
 
 
-    public Usuario(string id, string nome, string email, string senha, string foto)
+    public Usuario(string id, string nome, string email, string senha, string tipo)
     {
         Nome = nome;
         Email = email;
         Id = id;
         Senha = senha;
-        Foto = foto;
+        Tipo = tipo;
     }
 
      public Usuario()

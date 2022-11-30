@@ -169,6 +169,9 @@
                             </div>
 
                             <p>@comentario.Coment</p>
+                            @if(ViewBag.tipoUser == "Adm" || ViewBag.user == comentario.User){
+                                <a href="/Home/Receita?user=@ViewBag.user&id=@Model.Id&comentarioDel=@comentario.Id"> <p>DELETAR COMENTÁRIO</p></a>
+                            }
                         </div> 
                    } 
                 } 

@@ -43,6 +43,7 @@ public class HomeController : Controller
         {
             receitas.Add(_context.Receitas.Find(id));
         }
+
         ViewBag.receitasFavs = receitas;
         return View(_context.Usuarios.Find(user));
     }
@@ -78,11 +79,18 @@ public class HomeController : Controller
         return View(_context.Receitas);
     }
 
-    public IActionResult Receita(int id, string user, string comentarios, string avaliacao, string favoritar)
+    public IActionResult Receita(int id, string user, string comentarios, string avaliacao, string favoritar, int comentarioDel)
     {
         ViewBag.ingredientes = _context.Ingredientes;
         ViewBag.comentarios = _context.Comentarios;
         ViewBag.user = user;
+
+        if (_context.Usuarios.Find(user) != null)
+        {
+            ViewBag.tipoUser = _context.Usuarios.Find(user).Tipo;
+        }
+        
+
         var totalComent = 0;
 
         if (favoritar == "Nao")
@@ -159,13 +167,19 @@ public class HomeController : Controller
             }
         }
 
+        if (comentarioDel != 0)
+        {
+            // _context.Comentarios.Remove(_context.Comentarios.Find(comentarioDel));
+            // _context.SaveChanges();
+
+        }
+
         return View(_context.Receitas.Find(id));
     }
 
-    public IActionResult CadastroResultado(string user, string nome, string email, string senha, string foto)
+    public IActionResult CadastroResultado(string user, string nome, string email, string senha)
     {
-        foto = "../imagens/perfil.png";
-        _context.Usuarios.Add(new Usuario(user, nome, email, senha, foto));
+        _context.Usuarios.Add(new Usuario(user, nome, email, senha, "User"));
         _context.SaveChanges();
         ViewBag.user = user;
         return View();

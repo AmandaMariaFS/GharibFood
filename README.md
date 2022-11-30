@@ -38,7 +38,7 @@ CREATE TABLE Usuarios(
     nome VARCHAR(200) NOT NULL,
     email VARCHAR(200) NOT NULL,
     senha VARCHAR(20) NOT NULL,
-    foto VARCHAR(100)
+    tipo VARCHAR(100)
 );  
 
 CREATE TABLE Comentarios(
@@ -56,7 +56,7 @@ CREATE TABLE Favoritos (
 ); 
 
 INSERT INTO Usuarios
-VALUES('Mandinha', 'Amanda Maria', 'a@gmail.com', '12345', 'Sem foto');
+VALUES('Mandinha', 'Amanda Maria', 'a@gmail.com', '12345', 'Adm');
 
 INSERT INTO Receitas
 VALUES(1, 'Arroz negro à brasileira', '../imagens/arroznegro.jpg', 
@@ -411,3 +411,5 @@ VALUES(79, 9, '1 colher de chá de água de rosas');
 
 INSERT INTO Ingredientes
 VALUES(80, 9, '1 colher de chá de suco de limão');
+
+```
