@@ -157,4 +157,7 @@ body {
   left: 50%;
   transform: translate(-50%,-50%);
   border-radius: 10px;
+  width: 320px;
+  max-width: 300px;
+  max-height: 250px;
 }
