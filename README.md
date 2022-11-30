@@ -412,4 +412,70 @@ VALUES(79, 9, '1 colher de chá de água de rosas');
 INSERT INTO Ingredientes
 VALUES(80, 9, '1 colher de chá de suco de limão');
 
+/* Pad Thai */
+
+INSERT INTO receitas
+VALUES(10, 'Pad Thai', '../imagens/pad.png', 'Imagem de Pad Thai', 'Salgado', 'Asia', 
+'https://www.youtube.com/embed/4rQ6JK4bn0A', '	Leve uma frigideira wok para aquecer em fogo alto. Adicione 2 col. de sopa de óleo, em seguida os camarões. Deixe dourar por 1 min de cada lado. Retire os camarões da wok e reserve.
+	Na mesma frigideira, adicione mais 2 col. de sopa de óleo e frite o tofu picado em cubos até ficar dourado. Cuidado para não mexer muito o tofu e despedaçar.
+	Adicione a cebola e o camarão seco e refogue bem.
+	Adicione o noodle. Em seguida, acrescente o açúcar, o suco de tamarindo e o molho de peixe. Vá mexendo e virando o noodle até que absorva todo o líquido.
+	Prove o noodle para checar o ponto de cozimento. Se precisar, adicione um pouco de água e continue mexendo até absorver o líquido novamente.
+	Puxe o noodle para as laterais da Wok, deixando um espaço vazio no centro.
+	Quebre os ovos no espaço vazio e mexa até espalhar bem por todo o centro da wok.
+	Cozinhe os ovos por 20 segundos
+	Mexa os ovos bruscamente com a espátula.
+	Volte o noodle para o centro, mexa bem para que o os ovos se misturem bem com o noodle.
+	Adicione o broto de feijão, a cebolinha cortada, os camarões grelhados e o amendoim moído. Desligue o fogo e mexa bem até misturar todos os ingredientes.
+', 'Pad Thai é uma comida de rua clássica da Tailândia. Os camarões frescos podem ser substituídos por cubos de frango ou porco.', '20 min', '2 porções', 0, 5, 0);
+
+
+INSERT INTO Ingredientes
+VALUES(81, 10, '120 g macarrão de arroz seco - próx. 5mm de largura');
+
+INSERT INTO Ingredientes
+VALUES(82, 10, '6-8 camarões médios - limpos e frescos');
+
+INSERT INTO Ingredientes
+VALUES(83, 10, '1/2 xíc.  tofu firme - picado em cubos pequenos');
+
+INSERT INTO Ingredientes
+VALUES(84, 10, '2 ovos');
+
+INSERT INTO Ingredientes
+VALUES(85, 10, '2 col. de sopa camarão seco - picado');
+
+INSERT INTO Ingredientes
+VALUES(86, 10, '2 col. de sopa nabo fermentado doce - (opcional)');
+
+INSERT INTO Ingredientes
+VALUES(87, 10, '2 xíc. broto de feijão (moyashi)');
+
+INSERT INTO Ingredientes
+VALUES(88, 10, '10 nirás ou 6 cebolinhas - picados em pedaços de 3cm');
+
+INSERT INTO Ingredientes
+VALUES(89, 10, '1 chalota - ou 1/2 cebola roxa picada');
+
+INSERT INTO Ingredientes
+VALUES(90, 10, '3 col. de sopa amendoim torrado - moído grosseiramente');
+
+INSERT INTO Ingredientes
+VALUES(91, 10, '4 col. de sopa molho de peixe - tailandês – Nam Pla');
+
+INSERT INTO Ingredientes
+VALUES(92, 10, '4 col. de sopa suco de tamarindo - (ou 1 col. de sopa de polpa de tamarindo – ver instruções)');
+
+INSERT INTO Ingredientes
+VALUES(93, 10, '2 col. de sopa açúcar de coco - pode ser substituído por açúcar mascavo');
+
+INSERT INTO Ingredientes
+VALUES(94, 10, '4 col. de sopa óleo vegetal');
+
+INSERT INTO Ingredientes
+VALUES(95, 10, '1 limão');
+
+INSERT INTO Ingredientes
+VALUES(96, 10, 'pimenta vermelha em flocos - a gosto');
+
 ```
