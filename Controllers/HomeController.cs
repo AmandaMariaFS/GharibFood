@@ -169,8 +169,8 @@ public class HomeController : Controller
 
         if (comentarioDel != 0)
         {
-            // _context.Comentarios.Remove(_context.Comentarios.Find(comentarioDel));
-            // _context.SaveChanges();
+            _context.Comentarios.Remove(_context.Comentarios.Find(comentarioDel));
+            _context.SaveChanges();
 
         }
 
