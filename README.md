@@ -1,6 +1,10 @@
 # GharibFood
 
-Site desenvolvido por estudantes do 3º ano do Técnico em informática integrado ao ensino médio
+Nosso site foi desenvolvido com a intenção de trazer mais conhecimento sobre a culínaria de outros países. Nossa empresa é a ThakaeTec (do árabe 'Thakae' = 'Inteligência' e 'Tec' de 'Tecnologia') é formada pelas seguintes integreantes:
+* Amanda Maria da Silva
+* Ana Luisa Oliveira
+* Camilly Moreira
+* Ikram Boublaou
 
 ## Como rodar o site:
 
